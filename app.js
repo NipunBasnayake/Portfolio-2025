@@ -7,7 +7,6 @@ document.querySelectorAll('.nav-link').forEach(anchor => {
     });
 });
 
-// Add hover effects
 document.querySelectorAll(".hover-effect").forEach(link => {
     link.addEventListener("mouseover", () => {
         link.style.color = "#F5F5F5";
