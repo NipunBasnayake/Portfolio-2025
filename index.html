@@ -1,16 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nipun Basnayake - Full Stack Developer Student</title>
+    <title>Software Engineer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    
 
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nipun Basnayake</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container-fluid d-flex justify-content-center align-items-center h-100 text-center text-white">
+            <div>
+                <h1 class="display-4">Nipun Basnayake</h1>
+                <p class="lead">Full Stack Developer Student | UCSC Undergraduate | Problem Solver</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://via.placeholder.com/350" class="img-fluid rounded-circle" alt="Profile Picture">
+                </div>
+                <div class="col-md-6">
+                    <h2>About Me</h2>
+                    <p>I am a passionate software engineer with experience in building web applications, mobile
+                        apps, and scalable solutions. I am always eager to learn new technologies and improve my
+                        skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section py-5">
+        <div class="container text-center">
+            <h2 class="display-4">Skills</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4>Frontend Development</h4>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React, Angular</li>
+                        <li>Bootstrap, Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Backend Development</h4>
+                    <ul>
+                        <li>Node.js, Express</li>
+                        <li>Java, Spring Boot</li>
+                        <li>PHP, Laravel</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Databases</h4>
+                    <ul>
+                        <li>MySQL, MongoDB</li>
+                        <li>PostgreSQL</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section py-5">
+        <div class="container text-center">
+            <h2 class="display-4">Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">A description of the project goes here. It's a full-stack web
+                                application.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">A description of the project goes here. It's a mobile app for
+                                managing tasks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">A description of the project goes here. It's a cloud-based
+                                solution for team collaboration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container text-center">
+            <h2 class="display-4">Contact Me</h2>
+            <div class="contact-details mt-4">
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+94778806029" class="hover-effect">+94778806029</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:nipunsathsara1999@gmail.com"
+                        class="hover-effect">nipunsathsara1999@gmail.com</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/NipunBasnayake" target="_blank"
+                        class="hover-effect">GitHub: NipunBasnayake</a></p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/nipun-basnayake" target="_blank"
+                        class="hover-effect">LinkedIn: Nipun Basnayake</a></p>
+                <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/nipuns99" target="_blank"
+                        class="hover-effect">Facebook: nipuns99</a></p>
+                <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/nipun__s" target="_blank"
+                        class="hover-effect">Instagram: nipun__s</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>

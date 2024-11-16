@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: #F5F5F5;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #A6795B !important;
+}
+
+.navbar-nav .nav-link {
+    color: #F5F5F5 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #C8AD7D !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #C8AD7D !important;
+}
+
+/* ----------------------- Hero Section ----------------------- */
+.hero-section {
+    background-color: #A6795B;
+    height: 100vh;
+    color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+/* ----------------------- About Section ----------------------- */
+.about-section {
+    height: 100vh;
+    background-color: #F5F5F5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section img {
+    max-width: 350px;
+    border-radius: 50%;
+}
+
+/* ----------------------- Skills Section ----------------------- */
+.skills-section {
+    height: 100vh;
+    background-color: #BEBEBE;
+    color: #333;
+}
+
+.skills-section h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* ----------------------- Projects Section ----------------------- */
+.projects-section {
+    height: 100vh;
+    background-color: #F5F5F5;
+    color: #333;
+}
+
+/* ----------------------- Contact Section ----------------------- */
+.contact-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #A6795B, #C8AD7D);
+    color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-details i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #C8AD7D;
+    transition: color 0.3s ease;
+}
+
+.contact-details a {
+    color: #C8AD7D;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #F5F5F5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+}
