@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #fff;
+    /* background-color: #1a1a1a; */
+    margin: 0;
 }
 
 section {
@@ -27,7 +29,7 @@ footer {
 }
 
 .navbar {
-    background-color: #A6795B !important;
+    background-color: #333 !important;
 }
 
 .navbar-nav .nav-link {
@@ -35,34 +37,39 @@ footer {
 }
 
 .navbar-nav .nav-link.active {
-    color: #C8AD7D !important;
+    color: #929292 !important;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #C8AD7D !important;
+    color: #929292 !important;
 }
+
 
 /* ----------------------- Hero Section ----------------------- */
 .hero-section {
-    background-color: #A6795B;
+    background: #ffffff url("assets/heroImage.jpg");
     height: 100vh;
-    color: #F5F5F5;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
 }
 
 .hero-section h1 {
-    font-size: 4rem;
+    color: #333;
+    font-size: 4.5rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .hero-section p {
-    font-size: 1.5rem;
+    color: #333;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 /* ----------------------- About Section ----------------------- */
+
 .about-section {
     height: 100vh;
     background-color: #F5F5F5;
@@ -80,14 +87,49 @@ footer {
 /* ----------------------- Skills Section ----------------------- */
 .skills-section {
     height: 100vh;
-    background-color: #BEBEBE;
-    color: #333;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 0;
+    overflow-y: auto;
 }
 
 .skills-section h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
-    color: #333;
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.skills-icons {
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.skill-item:hover p {
+    color: #fff; /* Highlight text on hover */
 }
 
 /* ----------------------- Projects Section ----------------------- */
@@ -100,8 +142,8 @@ footer {
 /* ----------------------- Contact Section ----------------------- */
 .contact-section {
     height: 100vh;
-    background: linear-gradient(135deg, #A6795B, #C8AD7D);
-    color: #F5F5F5;
+    background-color: #FFFFFF;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,37 +151,31 @@ footer {
 }
 
 .contact-details p {
-    font-size: 1.2rem;
     margin: 15px 0;
-    display: flex;
+}
+
+.contact-btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-}
-
-.contact-details i {
-    font-size: 1.5rem;
-    margin-right: 10px;
-    color: #C8AD7D;
-    transition: color 0.3s ease;
-}
-
-.contact-details a {
-    color: #C8AD7D;
-    text-decoration: none;
+    background-color: #333;
+    color: #FFFFFF;
     font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-.contact-details a:hover {
-    color: #F5F5F5;
+.contact-btn i {
+    margin-right: 10px;
+    font-size: 1.5rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 3rem;
-    }
-    .hero-section p {
-        font-size: 1.2rem;
-    }
+.contact-btn:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
+
+
+
