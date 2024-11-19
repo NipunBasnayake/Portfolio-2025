@@ -12,7 +12,8 @@
 
 <body>
 
-    <!-- Navbar -->
+    <!-- ------------------------ Navbar ------------------------ -->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Nipun Basnayake</a>
@@ -42,27 +43,37 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+
+    <!-- ------------------------ Hero Section ------------------------ -->
+
     <section id="hero" class="hero-section">
+        <div id="background"></div>
         <div class="container-fluid d-flex justify-content-center align-items-center h-100 text-center text-white">
             <div>
                 <h1 class="display-4">Nipun Basnayake</h1>
-                <p class="lead">Full Stack Developer Student | UCSC Undergraduate | Problem Solver</p>
+                <p class="lead">
+                    <span class="slide-text">Full Stack Developer Student</span>
+                    <span class="slide-text">UCSC Undergraduate</span>
+                    <span class="slide-text">Problem Solver</span>
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+
+    <!-- ------------------------ About Section ------------------------ -->
+
     <section id="about" class="about-section py-5">
         <div class="container text-center">
-            <div class="row">
+            <div class="row align-items-center mx-auto">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <img src="assets/ProfilePic.jpg" class="img-fluid rounded-circle" alt="Profile Picture">
                 </div>
                 <div class="col-md-6">
                     <h2><strong>About Me</strong></h2>
                     <p>
-                        Hi, I’m Nipun Sathsara Basnayake, a passionate 24-year-old Software Engineering student from
+                        Hi, I’m <strong>Nipun Sathsara Basnayake</strong>, a passionate 24-year-old Software Engineering
+                        student from
                         Negombo, Sri Lanka. I am currently pursuing my Bachelor's degree in Information Technology at
                         the University of Colombo School of Computing (UCSC). <br><br>
 
@@ -76,12 +87,13 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+
+    <!-- ------------------------ Skills Section ------------------------ -->
+
     <section id="skills" class="skills-section d-flex flex-column justify-content-center align-items-center">
         <div class="container text-center">
             <h2 class="display-4 mb-5">Skills</h2>
             <div class="row w-100">
-                <!-- Frontend Development -->
                 <div class="col-md-4">
                     <h4>Frontend Development</h4>
                     <div class="skills-icons d-flex flex-wrap justify-content-center">
@@ -94,45 +106,37 @@
                             <p>CSS</p>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-icon">
+                            <img src="assets/icons/js.png" alt="JavaScript" class="skill-icon">
                             <p>JavaScript</p>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/icons/bootstrap.svg" alt="Bootstrap" class="skill-icon">
+                            <img src="assets/icons/bootstrap.png" alt="Bootstrap" class="skill-icon">
                             <p>Bootstrap</p>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/tailwind.svg" alt="Tailwind CSS" class="skill-icon">
-                            <p>Tailwind CSS</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Backend Development -->
                 <div class="col-md-4">
                     <h4>Backend Development</h4>
                     <div class="skills-icons d-flex flex-wrap justify-content-center">
                         <div class="skill-item">
-                            <img src="assets/icons/java.svg" alt="Java" class="skill-icon">
+                            <img src="assets/icons/java.png" alt="Java" class="skill-icon">
                             <p>Java</p>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/icons/php.svg" alt="PHP" class="skill-icon">
+                            <img src="assets/icons/php.png" alt="PHP" class="skill-icon">
                             <p>PHP</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Databases -->
                 <div class="col-md-4">
                     <h4>Databases</h4>
                     <div class="skills-icons d-flex flex-wrap justify-content-center">
                         <div class="skill-item">
-                            <img src="assets/icons/mysql.svg" alt="MySQL" class="skill-icon">
+                            <img src="assets/icons/mysql.png" alt="MySQL" class="skill-icon">
                             <p>MySQL</p>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/icons/mongodb.svg" alt="MongoDB" class="skill-icon">
+                            <img src="assets/icons/mongodb.png" alt="MongoDB" class="skill-icon">
                             <p>MongoDB</p>
                         </div>
                     </div>
@@ -142,42 +146,59 @@
     </section>
 
 
+    <!-- ------------------------ Projects Section ------------------------ -->
 
-    <!-- Projects Section -->
     <section id="projects" class="projects-section py-5">
         <div class="container text-center">
-            <h2 class="display-4">Projects</h2>
-            <div class="row">
+            <h2 class="display-4 mt-4 text-primary-dark">Projects</h2>
+            <p class="lead text-secondary mb-5">A showcase of my featured projects.</p>
+            <div class="row justify-content-center">
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <img src="assets/projects/todo.jpg" class="card-img-top" alt="Todo List">
                         <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur,
-                                veritatis molestiae nesciunt nisi enim exercitationem inventore culpa earum numquam
-                                nostrum ipsum beatae alias laboriosam vitae at perspiciatis ratione quod dolor!</p>
+                            <h5 class="card-title">Todo List</h5>
+                            <p class="card-text">ToDo List is a simple and interactive web application built using HTML,
+                                CSS, and JavaScript. It enables users to add, edit, and delete tasks, keeping their
+                                daily activities organized. The app features a clean and responsive design, with smooth
+                                animations and real-time updates. Perfect for managing personal tasks efficiently, it
+                                also includes features like task prioritization and completion status tracking.</p>
+                            <button id="github-btn-1" class="btn btn-accent-light">
+                                <i class="fab fa-github me-2"></i> View on GitHub
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <img src="assets/projects/fashionshop.jpg" class="card-img-top" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur,
-                                veritatis molestiae nesciunt nisi enim exercitationem inventore culpa earum numquam
-                                nostrum ipsum beatae alias laboriosam vitae at perspiciatis ratione quod dolor!</p>
+                            <h5 class="card-title">Fashion Shop</h5>
+                            <p class="card-text">FashionShop is a sleek and intuitive Java Swing-based desktop
+                                application designed to streamline fashion retail operations. This app enables users to
+                                manage inventory, track sales, and handle customer data with ease. Built with a modern
+                                and user-friendly interface, it incorporates features such as dynamic data display,
+                                sorting, and customized reporting, making it a robust tool for small to medium-sized
+                                fashion businesses.</p>
+                            <button id="github-btn-2" class="btn btn-accent-light">
+                                <i class="fab fa-github me-2"></i> View on GitHub
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <img src="assets/projects/service.jpg" class="card-img-top" alt="Project 3">
                         <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur,
-                                veritatis molestiae nesciunt nisi enim exercitationem inventore culpa earum numquam
-                                nostrum ipsum beatae alias laboriosam vitae at perspiciatis ratione quod dolor!</p>
+                            <h5 class="card-title">Service Management System</h5>
+                            <p class="card-text">Service Management System is a dynamic web-based solution developed
+                                using PHP, HTML, and CSS to manage service-based businesses. The system allows users to
+                                handle bookings, manage customer records, track services, and generate reports. Designed
+                                with a responsive UI, it ensures seamless accessibility across devices, offering a
+                                reliable tool for service providers to enhance their efficiency.</p>
+                            <button id="github-btn-3" class="btn btn-accent-light">
+                                <i class="fab fa-github me-2"></i> View on GitHub
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -185,41 +206,62 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+
+    <!-- ------------------------ Contact Section------------------------ -->
+
     <section id="contact" class="contact-section py-5">
         <div class="container text-center">
             <h2 class="display-4">Contact Me</h2>
-            <div class="contact-details mt-4">
-                <p>
-                    <a href="tel:+94778806029" class="contact-btn">
-                        <i class="fas fa-phone-alt"></i> +94778806029
-                    </a>
-                </p>
-                <p>
-                    <a href="mailto:nipunsathsara1999@gmail.com" class="contact-btn">
-                        <i class="fas fa-envelope"></i> nipunsathsara1999@gmail.com
-                    </a>
-                </p>
-                <p>
-                    <a href="https://github.com/NipunBasnayake" target="_blank" class="contact-btn">
-                        <i class="fab fa-github"></i> GitHub: NipunBasnayake
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.linkedin.com/in/nipun-basnayake" target="_blank" class="contact-btn">
-                        <i class="fab fa-linkedin"></i> LinkedIn: Nipun Basnayake
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.facebook.com/nipuns99" target="_blank" class="contact-btn">
-                        <i class="fab fa-facebook"></i> Facebook: nipuns99
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.instagram.com/nipun__s" target="_blank" class="contact-btn">
-                        <i class="fab fa-instagram"></i> Instagram: nipun__s
-                    </a>
-                </p>
+            <div class="contact-details mt-4 d-flex justify-content-center flex-wrap gap-4">
+                <!-- Email -->
+                <a href="mailto:nipunsathsara1999@gmail.com" class="contact-btn" title="Send Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/NipunBasnayake" target="_blank" class="contact-btn" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/nipunbasnayake/" target="_blank" class="contact-btn"
+                    title="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/nipun.s99?mibextid=ZbWKwL" target="_blank" class="contact-btn"
+                    title="Facebook Profile">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/nipun__s/" target="_blank" class="contact-btn"
+                    title="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/94778806029" target="_blank" class="contact-btn" title="WhatsApp Chat">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <div class="message-section mt-5 mx-auto">
+                <h3>Send Me a Message</h3>
+                <form action="https://formsubmit.co/nipunsathsara1999@gmail.com" method="POST" class="mt-3">
+                    <div class="form-group mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <textarea name="message" rows="4" class="form-control" placeholder="Your Message"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
