@@ -68,13 +68,29 @@ document.getElementById('github-btn-3').addEventListener('click', function () {
 });
 
 
-// --------------------------- Text Slide Show ---------------------------
 
-const slides = document.querySelectorAll('.slide-text');
-let currentSlide = 0;
+window.addEventListener('DOMContentLoaded', (event) => {
+    const texts = document.querySelectorAll('.slide-text');
+    let currentIndex = 0;
 
-setInterval(() => {
-    slides[currentSlide].style.display = 'none';
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].style.display = 'inline-block';
-}, 3000);
+    function fadeText() {
+        // Hide all texts
+        texts.forEach((text, index) => {
+            text.classList.remove('show');
+            text.style.display = 'none';
+        });
+
+        // Show the current text with fade-in effect
+        texts[currentIndex].style.display = 'block';
+        setTimeout(() => {
+            texts[currentIndex].classList.add('show');
+        }, 50);
+
+        // Move to the next text after 3 seconds
+        currentIndex = (currentIndex + 1) % texts.length;
+    }
+
+    // Start the animation loop
+    setInterval(fadeText, 4000); // Change text every 4 seconds
+    fadeText(); // Initial call to show the first text
+});
