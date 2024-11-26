@@ -74,23 +74,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let currentIndex = 0;
 
     function fadeText() {
-        // Hide all texts
         texts.forEach((text, index) => {
             text.classList.remove('show');
             text.style.display = 'none';
         });
 
-        // Show the current text with fade-in effect
         texts[currentIndex].style.display = 'block';
         setTimeout(() => {
             texts[currentIndex].classList.add('show');
         }, 50);
-
-        // Move to the next text after 3 seconds
         currentIndex = (currentIndex + 1) % texts.length;
     }
-
-    // Start the animation loop
-    setInterval(fadeText, 4000); // Change text every 4 seconds
-    fadeText(); // Initial call to show the first text
+    setInterval(fadeText, 4000);
+    fadeText();
 });
