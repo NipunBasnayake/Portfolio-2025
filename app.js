@@ -1,100 +1,187 @@
-const skillsData = [
-    {
-        category: "Frontend Development",
-        icon: "fa-laptop-code",
-        skills: [
-            { name: "HTML5", image: "assets/icons/html5.png", progress: 90 },
-            { name: "CSS3", image: "assets/icons/css3.png", progress: 85 },
-            { name: "JavaScript", image: "assets/icons/js.png", progress: 80 },
-            { name: "Bootstrap", image: "assets/icons/bootstrap.png", progress: 85 },
-            { name: "React", image: "assets/icons/react.png", progress: 75 },
-            { name: "Angular", image: "assets/icons/angular.png", progress: 70 },
-            { name: "Tailwind CSS", image: "assets/icons/tailwind.png", progress: 75 }
-        ]
-    },
-    {
-        category: "Backend Development",
-        icon: "fa-server",
-        skills: [
-            { name: "Java", image: "assets/icons/java.png", progress: 85 },
-            { name: "Spring Boot", image: "assets/icons/springboot.png", progress: 80 },
-            { name: "PHP", image: "assets/icons/php.png", progress: 75 },
-            { name: "Node.js", image: "assets/icons/nodejs.png", progress: 65 },
-            { name: "Python", image: "assets/icons/python.png", progress: 70 }
-        ]
-    },
-    {
-        category: "Database & Tools",
-        icon: "fa-database",
-        skills: [
-            { name: "MySQL", image: "assets/icons/mysql.png", progress: 85 },
-            { name: "MongoDB", image: "assets/icons/mongodb.png", progress: 70 },
-            { name: "Git", image: "assets/icons/git.png", progress: 80 },
-            { name: "Postman", image: "assets/icons/postman.png", progress: 75 },
-            { name: "Docker", image: "assets/icons/docker.png", progress: 65 }
-        ]
-    },
-    {
-        category: "Mobile Development",
-        icon: "fa-mobile-alt",
-        skills: [
-            { name: "Android Studio", image: "assets/icons/android.png", progress: 70 },
-            { name: "React Native", image: "assets/icons/react-native.png", progress: 65 },
-            { name: "Firebase", image: "assets/icons/firebase.png", progress: 75 }
-        ]
+function populateMainSkillAreas() {
+    const skillAreasContainer = document.getElementById('main-skill-areas');
+    skillAreasContainer.innerHTML = '';
+    mainSkillAreas.forEach((area, index) => {
+        const delay = (index + 1) * 100;
+        const skillAreaHTML = `
+            <div class="col-md-6 mb-5" data-aos="fade-up" data-aos-delay="${delay}">
+                <div class="skill-area-card">
+                    <div class="skill-area-header">
+                        <div class="skill-area-icon">
+                            <i class="fas ${area.icon}"></i>
+                        </div>
+                        <h3>${area.title}</h3>
+                    </div>
+                    <p class="skill-area-description">${area.description}</p>
+                    <div class="skill-area-tags">
+                        ${area.skills.map(skill => `<span class="skill-badge">${skill}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+        skillAreasContainer.innerHTML += skillAreaHTML;
+    });
+}
+
+function populateProjects() {
+    const projectContainer = document.getElementById('project-container');
+    projectContainer.innerHTML = '';
+    projectsData.forEach((project, index) => {
+        const delay = (index % 3 + 1) * 100;
+        const projectHTML = `
+            <div class="col-md-6 col-lg-4 mb-4 project-item ${project.category}" data-aos="fade-up" data-aos-delay="${delay}">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="${project.image.replace('assets/projects/', '/api/placeholder/400/250')}" 
+                             alt="${project.title}" 
+                             class="img-fluid"
+                             onerror="this.onerror=null; this.src='${project.defaultImage}'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="${project.demoLink}" target="_blank" class="project-link">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="${project.codeLink}" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                        </div>
+                        <h4 class="project-title">${project.title}</h4>
+                        <p class="project-description">
+                            ${project.description}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        `;
+        projectContainer.innerHTML += projectHTML;
+    });
+}
+
+function populatePersonalInfo() {
+    document.querySelector('.hero-content h1').innerHTML = `Hi, I'm <span class="highlight">${personalData.firstName}</span>`;
+    
+    if (document.getElementById('typewriter-text')) {
+        new Typed('#typewriter-text', {
+            strings: personalData.roles,
+            typeSpeed: 80,
+            backSpeed: 40,
+            backDelay: 1500,
+            startDelay: 500,
+            loop: true,
+        });
     }
-];
+    
+    document.querySelector('.about-content h3').textContent = sectionsData.about.subtitle;
+    document.querySelector('.about-content .lead').innerHTML = `
+        Hi, I'm <strong>${personalData.fullName}</strong>, a passionate ${personalData.age}-year-old Software
+        Engineering student from ${personalData.location}.
+    `;
+    document.querySelector('.about-content p:not(.lead)').textContent = personalData.bio;
+    
+    document.querySelectorAll('.info-item').forEach(item => {
+        const title = item.querySelector('.info-title').textContent.trim().slice(0, -1).toLowerCase();
+        
+        if (title === 'name') {
+            item.querySelector('.info-value').textContent = personalData.fullName;
+        } else if (title === 'age') {
+            item.querySelector('.info-value').textContent = personalData.age;
+        } else if (title === 'location') {
+            item.querySelector('.info-value').textContent = personalData.location;
+        } else if (title === 'education') {
+            item.querySelector('.info-value').textContent = personalData.education;
+        }
+    });
+    
+    document.querySelector('.experience-badge .number').textContent = personalData.experience;
+    
+    document.querySelector('a[href^="mailto:"]').textContent = personalData.email;
+    document.querySelector('a[href^="mailto:"]').href = `mailto:${personalData.email}`;
+    document.querySelector('a[href^="tel:"]').textContent = personalData.phone;
+    document.querySelector('a[href^="tel:"]').href = `tel:${personalData.phone}`;
+    
+    const socialLinkElements = document.querySelectorAll('.social-links a');
+    socialLinkElements.forEach(link => {
+        const icon = link.querySelector('i');
+        if (icon.classList.contains('fa-github')) {
+            link.href = personalData.socialLinks.github;
+        } else if (icon.classList.contains('fa-linkedin-in')) {
+            link.href = personalData.socialLinks.linkedin;
+        } else if (icon.classList.contains('fa-facebook-f')) {
+            link.href = personalData.socialLinks.facebook;
+        } else if (icon.classList.contains('fa-instagram')) {
+            link.href = personalData.socialLinks.instagram;
+        } else if (icon.classList.contains('fa-whatsapp')) {
+            link.href = personalData.socialLinks.whatsapp;
+        }
+    });
+    
+    Object.keys(sectionsData).forEach(section => {
+        const sectionElement = document.getElementById(section);
+        if (sectionElement) {
+            const titleElement = sectionElement.querySelector('.section-title h2');
+            const descriptionElement = sectionElement.querySelector('.section-description');
+            
+            if (titleElement && sectionsData[section].title) {
+                titleElement.textContent = sectionsData[section].title;
+            }
+            
+            if (descriptionElement && sectionsData[section].subtitle) {
+                descriptionElement.textContent = sectionsData[section].subtitle;
+            }
+        }
+    });
+    
+    document.querySelector('.footer .mb-0').textContent = `© ${new Date().getFullYear()} ${personalData.fullName}. All rights reserved.`;
+}
 
-// Projects data
-const projectsData = [
-    {
-        title: "Todo List App",
-        description: "A simple and interactive web application that enables users to add, edit, and delete tasks, keeping their daily activities organized.",
-        image: "assets/projects/todo.jpg",
-        tags: ["HTML", "CSS", "JavaScript"],
-        demoLink: "https://nipunbasnayake.github.io/ToDo/",
-        codeLink: "https://github.com/NipunBasnayake/ToDo",
-        category: "web"
-    },
-    {
-        title: "Fashion Shop",
-        description: "A Java Swing-based desktop application designed to streamline fashion retail operations, inventory management, and sales tracking.",
-        image: "assets/projects/fashionshop.jpg",
-        tags: ["Java", "Swing", "MySQL"],
-        demoLink: "#",
-        codeLink: "https://github.com/NipunBasnayake/Fashion-Shop",
-        category: "desktop"
-    },
-    {
-        title: "Service Management System",
-        description: "A web-based solution developed using PHP to manage service-based businesses, handling bookings and customer records.",
-        image: "assets/projects/service.jpg",
-        tags: ["PHP", "MySQL", "Bootstrap"],
-        demoLink: "#",
-        codeLink: "https://github.com/NipunBasnayake/Vehicle-Service-Management-System",
-        category: "web"
-    },
-    {
-        title: "Fitness Tracker App",
-        description: "A mobile application for tracking workouts, nutrition, and fitness goals with personalized recommendations.",
-        image: "assets/projects/fitness-app.jpg",
-        tags: ["React Native", "Firebase", "Redux"],
-        demoLink: "#",
-        codeLink: "#",
-        category: "mobile"
-    },
+function initParticles() {
+    if (document.getElementById('particles-js')) {
+        particlesJS('particles-js', particlesConfig);
+    }
+}
 
-];
+function smoothScroll(target, duration) {
+    const targetElement = document.querySelector(target);
+    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 70;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
 
-$(document).ready(function () {
-    "use strict";
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
 
-    // ----------------------- Handle Preloader -----------------------
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    populatePersonalInfo();
+    populateMainSkillAreas();
+    populateProjects();
+    initParticles();
+    
     let progress = 0;
     const interval = setInterval(function() {
         progress += Math.floor(Math.random() * 15);
         if (progress > 100) progress = 100;
-        $('#progress-fill').css('width', progress + '%');
+        document.getElementById('progress-fill').style.width = progress + '%';
         
         if (progress === 100) {
             clearInterval(interval);
@@ -104,199 +191,122 @@ $(document).ready(function () {
         }
     }, 300);
 
-    $(window).on('load', function() {
+    window.addEventListener('load', function() {
         clearInterval(interval);
-        $('#progress-fill').css('width', '100%');
+        document.getElementById('progress-fill').style.width = '100%';
         setTimeout(function() {
             fadeOutPreloader();
         }, 500);
     });
 
     function fadeOutPreloader() {
-        $('#preloader').fadeOut(800, function() {
-            $('body').css('overflow', 'visible');
-            
-            AOS.init({
-                duration: 1000,
-                once: true,
-                easing: 'ease-in-out',
-                offset: 100
-            });
-            
-            animateSkills();
-        });
-    }
-
-    // ----------------------- Initialize Particles.js -----------------------
-    if (document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 80,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: "#ffffff"
-                },
-                shape: {
-                    type: "circle",
-                    stroke: {
-                        width: 0,
-                        color: "#000000"
-                    },
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false,
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#ffffff",
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "grab"
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: "push"
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 140,
-                        line_linked: {
-                            opacity: 1
-                        }
-                    },
-                    push: {
-                        particles_nb: 4
-                    },
-                }
-            },
-            retina_detect: true
-        });
-    }
-
-    // ----------------------- Typed.js for text animation -----------------------
-    if (document.getElementById('typewriter-text')) {
-        new Typed('#typewriter-text', {
-            strings: [
-                "Full Stack Developer",
-                "UCSC Undergraduate",
-                "Java Developer",
-                "React Developer",
-                "Angular Developer",
-                "Spring Boot Developer",
-                "Problem Solver"
-            ],
-            typeSpeed: 80,
-            backSpeed: 40,
-            backDelay: 1500,
-            startDelay: 500,
-            loop: true,
-        });
-    }
-
-    // ----------------------- Navbar -----------------------
-    $(window).on('scroll', function () {
-        const scrollPosition = $(window).scrollTop();
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        document.body.style.overflow = 'visible';
         
-        const isAtHero = scrollPosition < $('#about').offset().top - 100;
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out',
+            offset: 100
+        });
+        
+        animateSkills();
+    }
+
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        const navbar = document.getElementById('main-navbar');
+        const aboutSection = document.getElementById('about');
+        const backToTop = document.getElementById('back-to-top');
+        
+        const isAtHero = scrollPosition < aboutSection.offsetTop - 100;
         
         if (scrollPosition > 50) {
-            $('#main-navbar').addClass('sticky');
+            navbar.classList.add('sticky');
             
             if (!isAtHero) {
-                $('#main-navbar').addClass('light-navbar');
+                navbar.classList.add('light-navbar');
             } else {
-                $('#main-navbar').removeClass('light-navbar');
+                navbar.classList.remove('light-navbar');
             }
         } else {
-            $('#main-navbar').removeClass('sticky');
-            $('#main-navbar').removeClass('light-navbar');
+            navbar.classList.remove('sticky');
+            navbar.classList.remove('light-navbar');
         }
 
         if (scrollPosition > 300) {
-            $('#back-to-top').addClass('show');
+            backToTop.classList.add('show');
         } else {
-            $('#back-to-top').removeClass('show');
+            backToTop.classList.remove('show');
         }
         
         updateActiveNavItem(scrollPosition);
     });
 
     function updateActiveNavItem(scrollPosition) {
-        $('section').each(function () {
-            const sectionTop = $(this).offset().top - 100;
-            const sectionBottom = sectionTop + $(this).outerHeight();
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        sections.forEach(function(section) {
+            const sectionTop = section.offsetTop - 100;
+            const sectionBottom = sectionTop + section.offsetHeight;
             
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                const id = $(this).attr('id');
-                $('.nav-link').removeClass('active');
-                $(`.nav-link[href="#${id}"]`).addClass('active');
+                const id = section.getAttribute('id');
+                
+                navLinks.forEach(function(link) {
+                    link.classList.remove('active');
+                });
+                
+                document.querySelector(`.nav-link[href="#${id}"]`).classList.add('active');
             }
         });
     }
 
-    // ----------------------- Smooth scrolling for navigation -----------------------
-    $('.nav-link, .scroll-down a, #back-to-top').on('click', function (e) {
-        if (this.hash !== '') {
-            e.preventDefault();
-            const hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top - 70
-            }, 800);
-        }
+    document.querySelectorAll('.nav-link, .scroll-down a, #back-to-top').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const hash = this.getAttribute('href');
+                smoothScroll(hash, 800);
+            }
+        });
     });
 
-    // ----------------------- Project filtering -----------------------
-    $('.filter-btn').on('click', function () {
-        const value = $(this).attr('data-filter');
-        
-        $('.filter-btn').removeClass('active');
-        $(this).addClass('active');
-        
-        if (value === 'all') {
-            $('.project-item').show('500');
-        } else {
-            $('.project-item').not('.' + value).hide('500');
-            $('.project-item').filter('.' + value).show('500');
-        }
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const value = this.getAttribute('data-filter');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            document.querySelectorAll('.filter-btn').forEach(function(button) {
+                button.classList.remove('active');
+            });
+            
+            this.classList.add('active');
+            
+            projectItems.forEach(function(item) {
+                if (value === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.classList.contains(value)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        });
     });
 
-    // ----------------------- Contact form validation -----------------------
-    $('#contact-form').on('submit', function (e) {
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const name = $('#name').val();
-        const email = $('#email').val();
-        const subject = $('#subject').val();
-        const message = $('#message').val();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
         
         if (name === '' || email === '' || subject === '' || message === '') {
             showAlert('Please fill in all fields', 'danger');
@@ -308,47 +318,91 @@ $(document).ready(function () {
     });
 
     function showAlert(message, type) {
-        const alertDiv = `
-            <div class="alert alert-${type} alert-dismissible fade show mt-3" role="alert">
-                ${message}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type} alert-dismissible fade show mt-3`;
+        alertDiv.role = 'alert';
+        alertDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         `;
         
-        $('.contact-form').prepend(alertDiv);
+        document.querySelector('.contact-form').prepend(alertDiv);
         
         setTimeout(function() {
-            $('.alert').alert('close');
+            alertDiv.classList.remove('show');
+            setTimeout(() => alertDiv.remove(), 300);
         }, 5000);
     }
 
-    // ----------------------- Back to top button -----------------------
-    $('#back-to-top').on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
-
-    // ----------------------- Animate skill progress bars -----------------------
     function animateSkills() {
-        $('.skill-progress').each(function() {
-            const width = $(this).data('width');
-            $(this).animate({
-                width: width + '%'
-            }, 1500);
+        document.querySelectorAll('.skill-progress').forEach(function(progress) {
+            const width = progress.getAttribute('data-width');
+            progress.style.transition = 'width 1.5s ease-in-out';
+            progress.style.width = width + '%';
         });
     }
 
-    $('#download-cv').on('click', function(e) {
+    document.getElementById('download-cv').addEventListener('click', function(e) {
         e.preventDefault();
         alert('CV download functionality will be implemented here');
     });
 
-    $(window).trigger('scroll');
+    window.dispatchEvent(new Event('scroll'));
     
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
+    initSmoothScrollForAllLinks();
 });
+
+function initSmoothScrollForAllLinks() {
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            smoothScroll(targetId, 800);
+        });
+    });
+    
+    document.querySelectorAll('.smooth-scroll-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetSection = this.getAttribute('data-target');
+            if (targetSection) {
+                smoothScroll(targetSection, 800);
+            }
+        });
+    });
+    
+    initScrollAnimation();
+}
+
+function initScrollAnimation() {
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+    
+    function elementInView(el) {
+        const elementTop = el.getBoundingClientRect().top;
+        return elementTop <= window.innerHeight * 0.8;
+    }
+    
+    function displayScrollElement(element) {
+        element.classList.add('scrolled');
+    }
+    
+    function hideScrollElement(element) {
+        element.classList.remove('scrolled');
+    }
+    
+    function handleScrollAnimation() {
+        scrollElements.forEach((el) => {
+            if (elementInView(el)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+    
+    handleScrollAnimation();
+}   

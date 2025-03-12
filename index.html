@@ -11,7 +11,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -56,7 +55,7 @@
         </div>
     </nav>
 
-    <section id="hero" class="hero-section">
+    <section id="hero" class="hero-section scroll-animate">
         <div class="particle-container">
             <div id="particles-js"></div>
         </div>
@@ -68,25 +67,25 @@
                         <span id="typewriter-text"></span><span class="cursor">|</span>
                     </div>
                     <div class="hero-buttons mt-4">
-                        <a href="#projects" class="btn btn-primary me-3">View My Work</a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        <a href="#projects" class="btn btn-primary me-3 smooth-scroll-btn" data-target="#projects">View My Work</a>
+                        <a href="#contact" class="btn btn-outline smooth-scroll-btn" data-target="#contact">Contact Me</a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000">
                     <div class="hero-image">
-                        <img src="/api/placeholder/500/500" alt="Developer Illustration" class="img-fluid">
+                        <img src="assets/profile_Illustration.png" alt="Developer Illustration" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
         <div class="scroll-down">
-            <a href="#about">
+            <a href="#about" class="smooth-scroll-btn" data-target="#about">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
     </section>
 
-    <section id="about" class="about-section py-5">
+    <section id="about" class="about-section py-5 scroll-animate">
         <div class="container">
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>About Me</h2>
@@ -95,9 +94,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
                     <div class="about-image">
-                        <img src="/api/placeholder/400/500" class="img-fluid rounded-lg shadow-lg" alt="Profile Picture">
+                        <img src="assets/ProfilePic.jpg" class="img-fluid rounded-lg shadow-lg" alt="Profile Picture">
                         <div class="experience-badge">
-                            <span class="number">2+</span>
+                            <span class="number"></span>
                             <span class="text">Years Coding</span>
                         </div>
                     </div>
@@ -142,7 +141,7 @@
                         </div>
                         <div class="about-buttons mt-4">
                             <a href="#" class="btn btn-primary me-3" id="download-cv">Download CV</a>
-                            <a href="#contact" class="btn btn-outline" style="color: var(--dark);">Get In Touch</a>
+                            <a href="#contact" class="btn btn-outline smooth-scroll-btn" data-target="#contact" style="color: var(--dark);">Get In Touch</a>
                         </div>
                     </div>
                 </div>
@@ -150,159 +149,20 @@
         </div>
     </section>
 
-    <section id="skills" class="skills-section py-5">
+    <section id="skills" class="skills-section py-5 scroll-animate">
         <div class="container">
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>My Skills</h2>
                 <div class="title-underline"></div>
+                <p class="section-description mt-3">A showcase of my technical expertise and proficiency</p>
             </div>
-
-            <div class="row" id="skills-container">
-                
-                <div class="col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skill-category text-center">
-                        <div class="skill-icon mb-4">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 class="mb-4">Frontend Development</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
-                                <img src="/api/placeholder/50/50" alt="HTML" class="skill-img">
-                                <p>HTML5</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                <img src="/api/placeholder/50/50" alt="CSS" class="skill-img">
-                                <p>CSS3</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
-                                <img src="/api/placeholder/50/50" alt="JavaScript" class="skill-img">
-                                <p>JavaScript</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                                <img src="/api/placeholder/50/50" alt="Bootstrap" class="skill-img">
-                                <p>Bootstrap</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="85"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                    <div class="skill-category text-center">
-                        <div class="skill-icon mb-4">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3 class="mb-4">Backend Development</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
-                                <img src="/api/placeholder/50/50" alt="Java" class="skill-img">
-                                <p>Java</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                <img src="/api/placeholder/50/50" alt="Spring Boot" class="skill-img">
-                                <p>Spring Boot</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
-                                <img src="/api/placeholder/50/50" alt="Node.js" class="skill-img">
-                                <p>Node.js</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="65"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                                <img src="/api/placeholder/50/50" alt="PHP" class="skill-img">
-                                <p>PHP</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="75"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
-                    <div class="skill-category text-center">
-                        <div class="skill-icon mb-4">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="mb-4">Database & Tools</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
-                                <img src="/api/placeholder/50/50" alt="MySQL" class="skill-img">
-                                <p>MySQL</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                <img src="/api/placeholder/50/50" alt="MongoDB" class="skill-img">
-                                <p>MongoDB</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="70"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
-                                <img src="/api/placeholder/50/50" alt="Git" class="skill-img">
-                                <p>Git</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                                <img src="/api/placeholder/50/50" alt="Postman" class="skill-img">
-                                <p>Postman</p>
-                                <div class="skill-level">
-                                    <div class="skill-progress" data-width="75"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-4">
-                <div class="col-12" data-aos="fade-up">
-                    <div class="skills-wrapper text-center">
-                        <h4 class="mb-4">Additional Skills & Technologies</h4>
-                        <div>
-                            <span class="skill-badge">Angular</span>
-                            <span class="skill-badge">React</span>
-                            <span class="skill-badge">Tailwind CSS</span>
-                            <span class="skill-badge">Python</span>
-                            <span class="skill-badge">Android Studio</span>
-                            <span class="skill-badge">Firebase</span>
-                            <span class="skill-badge">RESTful APIs</span>
-                            <span class="skill-badge">Docker</span>
-                            <span class="skill-badge">AWS</span>
-                            <span class="skill-badge">GraphQL</span>
-                            <span class="skill-badge">UI/UX Design</span>
-                            <span class="skill-badge">Responsive Design</span>
-                            <span class="skill-badge">Agile Methodology</span>
-                        </div>
-                    </div>
-                </div>
+    
+            <div class="row" id="main-skill-areas">
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects-section py-5">
+    <section id="projects" class="projects-section py-5 scroll-animate">
         <div class="container">
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>My Projects</h2>
@@ -318,192 +178,6 @@
             </div>
 
             <div class="row" id="project-container">
-                
-                <div class="col-md-6 col-lg-4 mb-4 project-item web" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="/api/placeholder/400/250" alt="Todo List App" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://nipunbasnayake.github.io/ToDo/" target="_blank"
-                                        class="project-link">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="https://github.com/NipunBasnayake/ToDo" target="_blank"
-                                        class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                            </div>
-                            <h4 class="project-title">Todo List App</h4>
-                            <p class="project-description">
-                                A simple and interactive web application that enables users to add, edit, and delete
-                                tasks, keeping their
-                                daily activities organized.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4 project-item desktop" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="/api/placeholder/400/250" alt="Fashion Shop" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="https://github.com/NipunBasnayake/Fashion-Shop" target="_blank"
-                                        class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-tags">
-                                <span class="project-tag">Java</span>
-                                <span class="project-tag">Swing</span>
-                                <span class="project-tag">MySQL</span>
-                            </div>
-                            <h4 class="project-title">Fashion Shop</h4>
-                            <p class="project-description">
-                                A Java Swing-based desktop application designed to streamline fashion retail operations,
-                                inventory management, and sales tracking.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4 project-item web" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="/api/placeholder/400/250" alt="Service Management System" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="https://github.com/NipunBasnayake/Vehicle-Service-Management-System"
-                                        target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-tags">
-                                <span class="project-tag">PHP</span>
-                                <span class="project-tag">MySQL</span>
-                                <span class="project-tag">Bootstrap</span>
-                            </div>
-                            <h4 class="project-title">Service Management System</h4>
-                            <p class="project-description">
-                                A web-based solution developed using PHP to manage service-based businesses, handling
-                                bookings and customer records.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4 project-item mobile" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="/api/placeholder/400/250" alt="Fitness Tracker App" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-tags">
-                                <span class="project-tag">React Native</span>
-                                <span class="project-tag">Firebase</span>
-                                <span class="project-tag">Redux</span>
-                            </div>
-                            <h4 class="project-title">Fitness Tracker App</h4>
-                            <p class="project-description">
-                                A mobile application for tracking workouts, nutrition, and fitness goals with
-                                personalized recommendations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4 project-item web" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="/api/placeholder/400/250" alt="E-commerce Platform" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-tags">
-                                <span class="project-tag">React</span>
-                                <span class="project-tag">Node.js</span>
-                                <span class="project-tag">MongoDB</span>
-                            </div>
-                            <h4 class="project-title">E-commerce Platform</h4>
-                            <p class="project-description">
-                                A full-stack e-commerce platform with product catalog, shopping cart, payment
-                                integration, and admin dashboard.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4 project-item desktop" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="/api/placeholder/400/250" alt="Inventory Management System"
-                                class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-tags">
-                                <span class="project-tag">C#</span>
-                                <span class="project-tag">.NET</span>
-                                <span class="project-tag">SQL Server</span>
-                            </div>
-                            <h4 class="project-title">Inventory Management System</h4>
-                            <p class="project-description">
-                                A desktop application for comprehensive inventory management with barcode scanning and
-                                reporting features.
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="text-center mt-4" data-aos="fade-up">
@@ -514,7 +188,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section py-5">
+    <section id="contact" class="contact-section py-5 scroll-animate">
         <div class="container">
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Get In Touch</h2>
@@ -529,8 +203,7 @@
                             <h3>Let's Talk</h3>
                             <p>
                                 Have a project in mind or want to collaborate? Feel free to reach out using any of the
-                                methods below.
-                                I'll get back to you as soon as possible!
+                                methods below. I'll get back to you as soon as possible!
                             </p>
                         </div>
 
@@ -638,7 +311,7 @@
         </div>
     </footer>
 
-    <a href="#" id="back-to-top" class="back-to-top">
+    <a href="#" id="back-to-top" class="back-to-top smooth-scroll-btn" data-target="#hero">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -647,6 +320,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    
+    <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
 
