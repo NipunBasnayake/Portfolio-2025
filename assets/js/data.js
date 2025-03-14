@@ -28,7 +28,7 @@ const personalData = {
     experience: "1+"
 };
 
-// Main Skill Areas (4 categories)
+// Main Skill Areas
 const mainSkillAreas = [
     {
         title: "Frontend Development",
