@@ -384,11 +384,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('download-cv').addEventListener('click', function (e) {
         e.preventDefault();
-        alert('CV download functionality will be implemented here');
+        const cvPath = 'assets/cv/Nipun Sathsara Resume.pdf';
+        
+        const link = document.createElement('a');
+        link.href = cvPath;
+        link.download = 'Nipun_Sathsara_Resume.pdf';
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     });
 
     window.dispatchEvent(new Event('scroll'));
-
     initSmoothScrollForAllLinks();
 });
 
