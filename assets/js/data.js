@@ -1,4 +1,3 @@
-// Personal Information
 const personalData = {
     firstName: "Nipun",
     lastName: "Sathsara Basnayake",
@@ -28,7 +27,6 @@ const personalData = {
     experience: "1+"
 };
 
-// Main Skill Areas
 const mainSkillAreas = [
     {
         title: "Frontend Development",
@@ -56,7 +54,6 @@ const mainSkillAreas = [
     }
 ];
 
-// Projects data
 const projectsData = [
     {
         "title": "MOS Burgers Ordering System",
@@ -126,7 +123,6 @@ const projectsData = [
     }
 ];
 
-// Section Content Data
 const sectionsData = {
     hero: {
         subtitle: "Welcome to my portfolio",
@@ -177,7 +173,6 @@ const sectionsData = {
     }
 };
 
-// Particle.js Configuration
 const particlesConfig = {
     particles: {
         number: {

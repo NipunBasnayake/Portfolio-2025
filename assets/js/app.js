@@ -171,11 +171,28 @@ function smoothScroll(target, duration) {
     requestAnimationFrame(animation);
 }
 
+function fixMobileScrolling() {
+    function setViewportHeight() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+    
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        document.addEventListener('touchstart', function(e) {
+            window.scrollY = window.scrollY;
+        }, { passive: false });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     populatePersonalInfo();
     populateMainSkillAreas();
     populateProjects();
     initParticles();
+    fixMobileScrolling();
 
     let progress = 0;
     const interval = setInterval(function () {
