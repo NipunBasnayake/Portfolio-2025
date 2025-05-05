@@ -31,26 +31,34 @@ const mainSkillAreas = [
     {
         title: "Frontend Development",
         icon: "fa-laptop-code",
-        description: "Creating responsive and interactive user interfaces",
-        skills: ["HTML5", "CSS3", "JavaScript", "React", "Angular", "Bootstrap", "Tailwind CSS", "Three Js", "Particle Js"]
+        description: "Designing and developing responsive, accessible, and interactive user interfaces.",
+        skills: [
+            "HTML5", "CSS3", "JavaScript", "React", "Angular", "Bootstrap", "Tailwind CSS", "Three.js", "Particles.js"
+        ]
     },
     {
-        title: "Backend & Database",
+        title: "Backend & Databases",
         icon: "fa-server",
-        description: "Building robust server-side applications and database systems",
-        skills: ["Java", "Spring Boot", "PHP", "Node.js", "Python", "RESTful APIs", "MySQL", "MongoDB", "SQL", "NoSQL"]
+        description: "Creating scalable server-side logic and managing reliable data storage systems.",
+        skills: [
+            "Java", "Spring Boot", "PHP", "Node.js", "Python", "RESTful APIs", "JPA", "Hibernate", "Kafka", "MySQL", "MongoDB", "SQL", "NoSQL"
+        ]
     },
     {
-        title: "Mobile & Cloud",
+        title: "Mobile & Cloud Technologies",
         icon: "fa-mobile-alt",
-        description: "Developing mobile applications and cloud infrastructure",
-        skills: ["Android Studio", "React Native", "Firebase", "Git", "Docker", "AWS"]
+        description: "Building cross-platform mobile apps and deploying services to the cloud.",
+        skills: [
+            "Android Studio", "React Native", "Firebase", "Git", "Docker", "AWS"
+        ]
     },
     {
         title: "Tools & Methodologies",
         icon: "fa-tools",
-        description: "Professional tools and development practices",
-        skills: ["Postman", "Agile Methodology", "JIRA", "VS Code", "IntelliJ IDEA", "Eclipse"]
+        description: "Utilizing modern tools and agile practices for efficient software development.",
+        skills: [
+            "Postman", "Agile Methodology", "JIRA", "Visual Studio Code", "IntelliJ IDEA", "Eclipse"
+        ]
     }
 ];
 
@@ -164,6 +172,10 @@ const sectionsData = {
         title: "My Projects",
         subtitle: "Check out some of my recent work",
         categories: ["all", "web", "mobile", "desktop"]
+    },
+    certifications: {
+        title: "Certifications",
+        subtitle: "Professional certifications and achievements"
     },
     contact: {
         title: "Get In Touch",

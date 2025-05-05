@@ -69,13 +69,38 @@ function populatePersonalInfo() {
     if (document.getElementById('typewriter-text')) {
         new Typed('#typewriter-text', {
             strings: personalData.roles,
-            typeSpeed: 80,
-            backSpeed: 40,
-            backDelay: 1500,
-            startDelay: 500,
+            typeSpeed: 70,
+            backSpeed: 35,
+            backDelay: 1600,
+            startDelay: 400,
             loop: true,
+            showCursor: true,
+            smartBackspace: true,
+            onBegin: () => {
+                const cursor = document.querySelector('.typed-cursor');
+                if (cursor && !document.getElementById('typewriter-styles')) {
+                    const styleEl = document.createElement('style');
+                    styleEl.id = 'typewriter-styles';
+                    styleEl.textContent = `
+                        .typed-cursor {
+                            display: inline-block;
+                            margin-left: 2px;
+                            width: 2px;
+                            background-color: var(--accent);
+                            animation: blink 1s infinite;
+                            height: 1.6rem;
+                            vertical-align: bottom;
+                        }
+                        @keyframes blink {
+                            0%, 100% { opacity: 1; }
+                            50% { opacity: 0; }
+                        }
+                    `;
+                    document.head.appendChild(styleEl);
+                }
+            }
         });
-    }
+    } 
 
     document.querySelector('.about-content h3').textContent = sectionsData.about.subtitle;
     document.querySelector('.about-content .lead').innerHTML = `
@@ -176,12 +201,12 @@ function fixMobileScrolling() {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
-    
+
     setViewportHeight();
     window.addEventListener('resize', setViewportHeight);
-    
+
     if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        document.addEventListener('touchstart', function(e) {
+        document.addEventListener('touchstart', function (e) {
             window.scrollY = window.scrollY;
         }, { passive: false });
     }
@@ -321,17 +346,17 @@ document.addEventListener('DOMContentLoaded', function () {
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             if (!name || !email || !subject || !message) {
                 showAlert('Please fill in all fields', 'danger');
                 return false;
             }
-            
+
             const formData = new FormData();
             formData.append('name', name);
             formData.append('email', email);
@@ -339,38 +364,38 @@ document.addEventListener('DOMContentLoaded', function () {
             formData.append('message', message);
             formData.append('_captcha', 'false');
             formData.append('_subject', `New message from ${name}: ${subject}`);
-            
+
             const submitButton = contactForm.querySelector('button[type="submit"]');
             const originalButtonText = submitButton.innerHTML;
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending...';
-            
+
             fetch('https://formsubmit.co/nipunsathsara1999@gmail.com', {
                 method: 'POST',
                 body: formData
             })
-            .then(response => {
-                if (response.ok) {
-                    showAlert('Your message has been sent successfully!', 'success');
-                    contactForm.reset();
-                } else {
-                    throw new Error('Server responded with an error');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showAlert('There was an error sending your message. Please try again later.', 'danger');
-            })
-            .finally(() => {
-                submitButton.disabled = false;
-                submitButton.innerHTML = originalButtonText;
-            });
+                .then(response => {
+                    if (response.ok) {
+                        showAlert('Your message has been sent successfully!', 'success');
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Server responded with an error');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showAlert('There was an error sending your message. Please try again later.', 'danger');
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                });
         });
-        
+
         function showAlert(message, type) {
             const existingAlerts = document.querySelectorAll('.alert');
             existingAlerts.forEach(alert => alert.remove());
-            
+
             const alertDiv = document.createElement('div');
             alertDiv.className = `alert alert-${type} alert-dismissible fade show mt-3`;
             alertDiv.role = 'alert';
@@ -378,12 +403,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 ${message}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             `;
-            
+
             const formWrapper = document.querySelector('.contact-form-wrapper');
             formWrapper.insertBefore(alertDiv, contactForm);
-            
+
             if (type !== 'danger') {
-                setTimeout(function() {
+                setTimeout(function () {
                     alertDiv.classList.remove('show');
                     setTimeout(() => alertDiv.remove(), 300);
                 }, 5000);
@@ -402,11 +427,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('download-cv').addEventListener('click', function (e) {
         e.preventDefault();
         const cvPath = 'assets/cv/Nipun Sathsara Resume.pdf';
-        
+
         const link = document.createElement('a');
         link.href = cvPath;
         link.download = 'Nipun_Sathsara_Resume.pdf';
-        
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
