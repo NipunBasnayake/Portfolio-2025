@@ -7,7 +7,7 @@ const personalData = {
     email: "nipunsathsara1999@gmail.com",
     phone: "+94 77 880 6029",
     education: "UCSC Undergraduate",
-    bio: "Hi, I'm Nipun Sathsara Basnayake, a passionate 24-year-old Software Engineering student from Negombo, Sri Lanka. I am currently pursuing my Bachelor's degree in Information Technology at the University of Colombo School of Computing (UCSC). With a keen interest in developing innovative software solutions, I aim to blend creativity and technical expertise to build impactful applications. Whether it's solving complex problems or learning new technologies, I'm driven to grow as a professional in the field of software engineering.",
+    bio: "Hi, I'm Nipun Sathsara Basnayake, a passionate 25-year-old Software Engineering student from Negombo, Sri Lanka. I am currently pursuing my Bachelor's degree in Information Technology at the University of Colombo School of Computing (UCSC). With a keen interest in developing innovative software solutions, I aim to blend creativity and technical expertise to build impactful applications. Whether it's solving complex problems or learning new technologies, I'm driven to grow as a professional in the field of software engineering.",
     socialLinks: {
         github: "https://github.com/NipunBasnayake",
         linkedin: "https://www.linkedin.com/in/nipunbasnayake/",
@@ -31,33 +31,37 @@ const mainSkillAreas = [
     {
         title: "Frontend Development",
         icon: "fa-laptop-code",
-        description: "Designing and developing responsive, accessible, and interactive user interfaces.",
+        description: "Crafting responsive, accessible, and visually engaging user interfaces using modern frameworks and libraries.",
         skills: [
-            "HTML5", "CSS3", "JavaScript", "React", "Angular", "Bootstrap", "Tailwind CSS", "Three.js", "Particles.js"
+            "HTML5", "CSS3", "JavaScript", "React", "Angular", "Bootstrap", "Tailwind CSS",
+            "Three.js", "Particles.js", "TypeScript", "SASS", "jQuery", "Figma"
         ]
     },
     {
         title: "Backend & Databases",
         icon: "fa-server",
-        description: "Creating scalable server-side logic and managing reliable data storage systems.",
+        description: "Building robust backend systems and managing relational and NoSQL databases for scalable applications.",
         skills: [
-            "Java", "Spring Boot", "PHP", "Node.js", "Python", "RESTful APIs", "JPA", "Hibernate", "Kafka", "MySQL", "MongoDB", "SQL", "NoSQL"
+            "Java", "Spring Boot", "PHP", "Node.js", "Python", "RESTful APIs", "JPA",
+            "Hibernate", "Kafka", "MySQL", "MongoDB", "SQL", "NoSQL"
         ]
     },
     {
         title: "Mobile & Cloud Technologies",
         icon: "fa-mobile-alt",
-        description: "Building cross-platform mobile apps and deploying services to the cloud.",
+        description: "Developing mobile applications and integrating cloud-based services for seamless, real-time access.",
         skills: [
-            "Android Studio", "React Native", "Firebase", "Git", "Docker", "AWS"
+            "Android Studio", "React Native", "Firebase", "Git", "Docker", "AWS", "Azure",
+            "Expo", "Figma", "Kotlin", "CI/CD", "Google Play Console", "REST APIs"
         ]
     },
     {
         title: "Tools & Methodologies",
         icon: "fa-tools",
-        description: "Utilizing modern tools and agile practices for efficient software development.",
+        description: "Applying agile workflows and leveraging modern tools to streamline development and collaboration.",
         skills: [
-            "Postman", "Agile Methodology", "JIRA", "Visual Studio Code", "IntelliJ IDEA", "Eclipse"
+            "Postman", "Agile Methodology", "JIRA", "VS Code", "IntelliJ IDEA", "Eclipse",
+            "GitHub", "Trello", "Maven", "Gradle", "Slack", "Bitbucket", "Scrum"
         ]
     }
 ];
