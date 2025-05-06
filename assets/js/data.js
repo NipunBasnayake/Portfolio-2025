@@ -65,7 +65,7 @@ const mainSkillAreas = [
 const projectsData = [
     {
         "title": "HR Management System",
-        "description": "A full-featured HR management system built with Spring Boot and Angular. It includes RESTful APIs, JPA for database operations, BCrypt for secure password encryption, and a responsive UI using Angular Material.",
+        "description": "Full-featured HR system with secure login, REST APIs, and Angular Material UI, built using Spring Boot and JPA.",
         "image": "Screenshots/app_screenshot.jpg",
         "defaultImage": "assets/images/projects/hrmanagement.jpg",
         "tags": ["Spring Boot", "JPA", "BCrypt", "JWT", "Angular", "Angular Material"],
@@ -76,7 +76,7 @@ const projectsData = [
     },
     {
         "title": "Task Manager Application",
-        "description": "A full-stack task management application with Angular and Spring Boot, allowing users to create, update, delete, and view tasks. Features optional JWT-based authentication and a clean UI built with Angular Material.",
+        "description": "Full-stack task manager app with Angular and Spring Boot, including JWT authentication and Docker support.",
         "image": "Screenshots/app_screenshot.jpg",
         "defaultImage": "assets/images/projects/taskmanager.jpg",
         "tags": ["Spring Boot", "JPA", "BCrypt", "JWT", "Angular", "Angular Material", "Docker"],
@@ -87,7 +87,7 @@ const projectsData = [
     },
     {
         "title": "Digital Tug Of War Game",
-        "description": "A real-time multiplayer tug-of-war game using a ReactJS frontend and Spring Boot backend. Powered by WebSockets for seamless live gameplay, team interaction, and instant updates.",
+        "description": "Real-time multiplayer Tug of War game using React, Spring Boot, and WebSocket for live interactive gameplay.",
         "image": "Screenshots/app_screenshot.jpg",
         "defaultImage": "assets/images/projects/tugofwar.jpg",
         "tags": ["ReactJS", "Spring Boot", "WebSocket", "STOMP", "SockJS", "Java", "CSS", "Maven"],
@@ -98,7 +98,7 @@ const projectsData = [
     },
     {
         "title": "MOS Burgers Ordering System",
-        "description": "A web-based application designed for MOS Burgers to manage orders and inventory. Built with Spring Boot, JPA, and Jasypt for backend security, and styled using HTML, CSS, JavaScript, and Bootstrap.",
+        "description": "Ordering system for MOS Burgers using Spring Boot and Bootstrap, with REST APIs and encrypted credentials.",
         "image": "Screenshots/app_screenshot.jpg",
         "defaultImage": "assets/images/projects/mosburgers.jpg",
         "tags": ["Spring Boot", "JPA", "Jasypt", "HTML", "CSS", "JavaScript", "Bootstrap"],
@@ -109,7 +109,7 @@ const projectsData = [
     },
     {
         "title": "Clothify Store POS System",
-        "description": "A desktop-based point-of-sale system for clothing stores built with JavaFX. It includes secure login, inventory management, and detailed reporting using Hibernate and Google Guice.",
+        "description": "JavaFX-based POS system for clothing stores with secure login, inventory tracking, and layered architecture.",
         "image": "Screenshots/main_screen.png",
         "defaultImage": "assets/images/projects/clothify.jpg",
         "tags": ["JavaFX", "Layered Architecture", "Hibernate", "Google Guice"],
@@ -120,7 +120,7 @@ const projectsData = [
     },
     {
         "title": "ChatterAI",
-        "description": "A modern AI-powered chat application that lets users converse in real-time with a chatbot powered by Google's Gemini model. Built with HTML, CSS, and JavaScript for a sleek and responsive interface.",
+        "description": "AI chatbot using Gemini AI and Google AI Studio, offering real-time chats with a responsive modern UI.",
         "image": "assets/images/projects/chatterai.jpg",
         "defaultImage": "https://via.placeholder.com/400x250/3498db/ffffff?text=ChatterAI",
         "tags": ["HTML", "CSS", "JavaScript", "AI", "Chatbot", "Google AI Studio"],
@@ -131,10 +131,10 @@ const projectsData = [
     },
     {
         "title": "LangEase Translator",
-        "description": "A simple and intuitive web-based language translator using the MyMemory API. It features instant translations, English voice synthesis, and a clean, responsive Bootstrap UI.",
+        "description": "Language translator using MyMemory API with speech synthesis, dynamic language switching, and responsive UI.",
         "image": "assets/projects/langease.jpg",
         "defaultImage": "assets/images/projects/langease.jpg",
-        "tags": ["HTML", "CSS", "JavaScript", "Bootstrap", "MyMemory API", "Speech Synthesis"],
+        "tags": ["HTML", "CSS", "JavaScript", "Bootstrap", "MyMemory Translated API", "Speech Synthesis"],
         "demoLink": "https://nipunbasnayake.github.io/LangEase-Translator/",
         "codeLink": "https://github.com/NipunBasnayake/LangEase-Translator",
         "category": "web",
@@ -142,7 +142,7 @@ const projectsData = [
     },
     {
         "title": "Vehicle Service Management System",
-        "description": "A PHP-based web platform for managing vehicle service centers. Features include service requests, vehicle tracking, service history, and role-based access for admins, staff, and customers.",
+        "description": "Web app to manage vehicle services, users, and roles using PHP, Bootstrap, and a MySQL database backend.",
         "image": "assets/projects/vsms.jpg",
         "defaultImage": "assets/images/projects/service.jpg",
         "tags": ["PHP", "JavaScript", "HTML", "CSS", "Bootstrap", "MySQL"],
@@ -153,10 +153,10 @@ const projectsData = [
     },
     {
         "title": "Checkmate 3D",
-        "description": "An immersive 3D chess game built with Three.js. Features smooth animations, realistic lighting, WebGL rendering, and optional integration with Stockfish for AI gameplay.",
+        "description": "A 3D chess game using Three.js with smooth animation, realistic lighting, and Stockfish engine integration.",
         "image": "assets/projects/checkmate3d.jpg",
         "defaultImage": "assets/images/projects/checkmate3d.jpg",
-        "tags": ["Three.js", "JavaScript", "3D Graphics", "Stockfish", "WebGL"],
+        "tags": ["Three.js", "JavaScript", "Three Js", "3D Graphics", "StockFish", "WebGL"],
         "demoLink": "https://nipunbasnayake.github.io/CheckMate3D",
         "codeLink": "https://github.com/NipunBasnayake/CheckMate3D",
         "category": "web",
