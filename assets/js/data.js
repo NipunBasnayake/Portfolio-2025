@@ -7,7 +7,7 @@ const personalData = {
     email: "nipunsathsara1999@gmail.com",
     phone: "+94 77 880 6029",
     education: "UCSC Undergraduate",
-    bio: "Hi, I'm Nipun Sathsara Basnayake, a passionate 24-year-old Software Engineering student from Negombo, Sri Lanka. I am currently pursuing my Bachelor's degree in Information Technology at the University of Colombo School of Computing (UCSC). With a keen interest in developing innovative software solutions, I aim to blend creativity and technical expertise to build impactful applications. Whether it's solving complex problems or learning new technologies, I'm driven to grow as a professional in the field of software engineering.",
+    bio: "Hi, I'm Nipun Sathsara Basnayake, a passionate 25-year-old Software Engineering student from Negombo, Sri Lanka. I am currently pursuing my Bachelor's degree in Information Technology at the University of Colombo School of Computing (UCSC). With a keen interest in developing innovative software solutions, I aim to blend creativity and technical expertise to build impactful applications. Whether it's solving complex problems or learning new technologies, I'm driven to grow as a professional in the field of software engineering.",
     socialLinks: {
         github: "https://github.com/NipunBasnayake",
         linkedin: "https://www.linkedin.com/in/nipunbasnayake/",
@@ -31,41 +31,78 @@ const mainSkillAreas = [
     {
         title: "Frontend Development",
         icon: "fa-laptop-code",
-        description: "Designing and developing responsive, accessible, and interactive user interfaces.",
+        description: "Crafting responsive, accessible, and visually engaging user interfaces using modern frameworks and libraries.",
         skills: [
-            "HTML5", "CSS3", "JavaScript", "React", "Angular", "Bootstrap", "Tailwind CSS", "Three.js", "Particles.js"
+            "HTML5", "CSS3", "JavaScript", "React", "Angular", "Bootstrap", "Tailwind CSS",
+            "Three.js", "Particles.js", "TypeScript", "SASS", "jQuery", "Figma"
         ]
     },
     {
         title: "Backend & Databases",
         icon: "fa-server",
-        description: "Creating scalable server-side logic and managing reliable data storage systems.",
+        description: "Building robust backend systems and managing relational and NoSQL databases for scalable applications.",
         skills: [
-            "Java", "Spring Boot", "PHP", "Node.js", "Python", "RESTful APIs", "JPA", "Hibernate", "Kafka", "MySQL", "MongoDB", "SQL", "NoSQL"
+            "Java", "Spring Boot", "PHP", "Node.js", "Python", "RESTful APIs", "JPA",
+            "Hibernate", "Kafka", "MySQL", "MongoDB", "SQL", "NoSQL"
         ]
     },
     {
         title: "Mobile & Cloud Technologies",
         icon: "fa-mobile-alt",
-        description: "Building cross-platform mobile apps and deploying services to the cloud.",
+        description: "Developing mobile applications and integrating cloud-based services for seamless, real-time access.",
         skills: [
-            "Android Studio", "React Native", "Firebase", "Git", "Docker", "AWS"
+            "Android Studio", "React Native", "Firebase", "Git", "Docker", "AWS", "Azure",
+            "Expo", "Figma", "Kotlin", "CI/CD", "Google Play Console", "REST APIs"
         ]
     },
     {
         title: "Tools & Methodologies",
         icon: "fa-tools",
-        description: "Utilizing modern tools and agile practices for efficient software development.",
+        description: "Applying agile workflows and leveraging modern tools to streamline development and collaboration.",
         skills: [
-            "Postman", "Agile Methodology", "JIRA", "Visual Studio Code", "IntelliJ IDEA", "Eclipse"
+            "Postman", "Agile Methodology", "JIRA", "VS Code", "IntelliJ IDEA", "Eclipse",
+            "GitHub", "Trello", "Maven", "Gradle", "Slack", "Bitbucket", "Scrum"
         ]
     }
 ];
 
 const projectsData = [
     {
+        "title": "HR Management System",
+        "description": "Full-featured HR system with secure login, REST APIs, and Angular Material UI, built using Spring Boot and JPA.",
+        "image": "Screenshots/app_screenshot.jpg",
+        "defaultImage": "assets/images/projects/hrmanagement.jpg",
+        "tags": ["Spring Boot", "JPA", "BCrypt", "JWT", "Angular", "Angular Material"],
+        "demoLink": "",
+        "codeLink": "https://github.com/NipunBasnayake/HrManagementSystem-Angular-Springboot",
+        "category": "web",
+        "featured": true
+    },
+    {
+        "title": "Task Manager Application",
+        "description": "Full-stack task manager app with Angular and Spring Boot, including JWT authentication and Docker support.",
+        "image": "Screenshots/app_screenshot.jpg",
+        "defaultImage": "assets/images/projects/taskmanager.jpg",
+        "tags": ["Spring Boot", "JPA", "BCrypt", "JWT", "Angular", "Angular Material", "Docker"],
+        "demoLink": "",
+        "codeLink": "https://github.com/NipunBasnayake/TaskManager-Angular-Springboot",
+        "category": "web",
+        "featured": true
+    },
+    {
+        "title": "Digital Tug Of War Game",
+        "description": "Real-time multiplayer Tug of War game using React, Spring Boot, and WebSocket for live interactive gameplay.",
+        "image": "Screenshots/app_screenshot.jpg",
+        "defaultImage": "assets/images/projects/tugofwar.jpg",
+        "tags": ["ReactJS", "Spring Boot", "WebSocket", "STOMP", "SockJS", "Java", "CSS", "Maven"],
+        "demoLink": "",
+        "codeLink": "https://github.com/NipunBasnayake/Digital-Tug-Of-War-Game",
+        "category": "web",
+        "featured": true
+    },
+    {
         "title": "MOS Burgers Ordering System",
-        "description": "A comprehensive web application designed for MOS Burgers to streamline ordering and management processes. It features a Spring Boot backend with RESTful APIs, JPA for database interactions, Jasypt for password encryption, and a responsive frontend built with HTML, CSS, JavaScript, and Bootstrap.",
+        "description": "Ordering system for MOS Burgers using Spring Boot and Bootstrap, with REST APIs and encrypted credentials.",
         "image": "Screenshots/app_screenshot.jpg",
         "defaultImage": "assets/images/projects/mosburgers.jpg",
         "tags": ["Spring Boot", "JPA", "Jasypt", "HTML", "CSS", "JavaScript", "Bootstrap"],
@@ -76,7 +113,7 @@ const projectsData = [
     },
     {
         "title": "Clothify Store POS System",
-        "description": "A JavaFX-based point-of-sale system designed for clothing stores, featuring secure authentication, inventory management, and detailed reporting.",
+        "description": "JavaFX-based POS system for clothing stores with secure login, inventory tracking, and layered architecture.",
         "image": "Screenshots/main_screen.png",
         "defaultImage": "assets/images/projects/clothify.jpg",
         "tags": ["JavaFX", "Layered Architecture", "Hibernate", "Google Guice"],
@@ -87,7 +124,7 @@ const projectsData = [
     },
     {
         "title": "ChatterAI",
-        "description": "An interactive web-based chat application that enables users to engage in real-time conversations with an AI chatbot powered by the Gemini AI model, offering contextually relevant responses and a modern user interface.",
+        "description": "AI chatbot using Gemini AI and Google AI Studio, offering real-time chats with a responsive modern UI.",
         "image": "assets/images/projects/chatterai.jpg",
         "defaultImage": "https://via.placeholder.com/400x250/3498db/ffffff?text=ChatterAI",
         "tags": ["HTML", "CSS", "JavaScript", "AI", "Chatbot", "Google AI Studio"],
@@ -98,7 +135,7 @@ const projectsData = [
     },
     {
         "title": "LangEase Translator",
-        "description": "A web-based language translation app featuring dynamic language selection, instant translations via MyMemory API, and English speech synthesis with a clean, responsive UI.",
+        "description": "Language translator using MyMemory API with speech synthesis, dynamic language switching, and responsive UI.",
         "image": "assets/projects/langease.jpg",
         "defaultImage": "assets/images/projects/langease.jpg",
         "tags": ["HTML", "CSS", "JavaScript", "Bootstrap", "MyMemory Translated API", "Speech Synthesis"],
@@ -109,7 +146,7 @@ const projectsData = [
     },
     {
         "title": "Vehicle Service Management System",
-        "description": "A comprehensive web-based solution to streamline vehicle service management, including service requests, vehicle details, service history, and user roles for vehicle owners, service centre staff, and admins.",
+        "description": "Web app to manage vehicle services, users, and roles using PHP, Bootstrap, and a MySQL database backend.",
         "image": "assets/projects/vsms.jpg",
         "defaultImage": "assets/images/projects/service.jpg",
         "tags": ["PHP", "JavaScript", "HTML", "CSS", "Bootstrap", "MySQL"],
@@ -120,16 +157,36 @@ const projectsData = [
     },
     {
         "title": "Checkmate 3D",
-        "description": "An interactive 3D chess game built with Three.js, featuring realistic lighting, smooth animations, and intuitive controls.",
+        "description": "A 3D chess game using Three.js with smooth animation, realistic lighting, and Stockfish engine integration.",
         "image": "assets/projects/checkmate3d.jpg",
         "defaultImage": "assets/images/projects/checkmate3d.jpg",
-        "tags": ["Three.js", "JavaScript","Three Js", "3D Graphics", "StockFish", "WebGL"],
+        "tags": ["Three.js", "JavaScript", "Three Js", "3D Graphics", "StockFish", "WebGL"],
         "demoLink": "https://nipunbasnayake.github.io/CheckMate3D",
         "codeLink": "https://github.com/NipunBasnayake/CheckMate3D",
         "category": "web",
         "featured": true
     }
 ];
+
+const certificationsData = [
+    {
+        title: "Postman API Student Expert",
+        issuer: "Postman",
+        date: "May 2024",
+        description: "Validated expertise in API design, development, testing, and documentation using Postman tools.",
+        badge: "assets/images/certifications/postman-api-student-expert-badge.png",
+        verificationLink: "https://badgr.com/public/assertions/YOUR_BADGE_LINK"
+    },
+    {
+        title: "Java Foundations Professional Certificate",
+        issuer: "JetBrains",
+        date: "May 2024",
+        description: "Demonstrated foundational knowledge in Java programming including OOP, exception handling, and basic algorithms using JetBrains tools and IntelliJ IDEA.",
+        badge: "assets/images/certifications/java-foundations-certificate.png",
+        verificationLink: "https://www.linkedin.com/learning/certificates/e36c4c7cb4dce77da805f0a45442256721d076b9b6e5b9f5dd37e9a4cd7a9a1e?trk=share_certificate"
+    }
+];
+
 
 const sectionsData = {
     hero: {
@@ -221,7 +278,7 @@ const particlesConfig = {
         },
         move: {
             enable: true,
-            speed: 1.2, 
+            speed: 1.2,
             direction: "none",
             random: false,
             straight: false,
