@@ -350,13 +350,11 @@ section {
 
 .hero-content .highlight {
     color: var(--accent);
-    position: relative;
     display: inline-block;
 }
 
 .hero-content .highlight::after {
     content: '';
-    position: absolute;
     width: 100%;
     height: 30%;
     background-color: rgba(230, 126, 34, 0.2);

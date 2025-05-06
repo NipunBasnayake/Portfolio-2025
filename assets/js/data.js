@@ -131,6 +131,26 @@ const projectsData = [
     }
 ];
 
+const certificationsData = [
+    {
+        title: "Postman API Student Expert",
+        issuer: "Postman",
+        date: "May 2024",
+        description: "Validated expertise in API design, development, testing, and documentation using Postman tools.",
+        badge: "assets/images/certifications/postman-api-student-expert-badge.png",
+        verificationLink: "https://badgr.com/public/assertions/YOUR_BADGE_LINK"
+    },
+    {
+        title: "Java Foundations Professional Certificate",
+        issuer: "JetBrains",
+        date: "May 2024",
+        description: "Demonstrated foundational knowledge in Java programming including OOP, exception handling, and basic algorithms using JetBrains tools and IntelliJ IDEA.",
+        badge: "assets/images/certifications/java-foundations-certificate.png",
+        verificationLink: "https://www.linkedin.com/learning/certificates/e36c4c7cb4dce77da805f0a45442256721d076b9b6e5b9f5dd37e9a4cd7a9a1e?trk=share_certificate"
+    }
+];
+
+
 const sectionsData = {
     hero: {
         subtitle: "Welcome to my portfolio",
