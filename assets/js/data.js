@@ -187,7 +187,6 @@ const certificationsData = [
     }
 ];
 
-
 const sectionsData = {
     hero: {
         subtitle: "Welcome to my portfolio",

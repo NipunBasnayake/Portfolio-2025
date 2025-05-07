@@ -670,6 +670,7 @@ section {
     opacity: 0;
     transition: var(--transition);
     transition-delay: 0.1s;
+    text-decoration: none;
 }
 
 .project-link:hover {
@@ -951,6 +952,7 @@ label {
     visibility: hidden;
     transition: var(--transition);
     z-index: 99;
+    text-decoration: none;
 }
 
 .back-to-top.show {
