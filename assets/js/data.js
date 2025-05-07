@@ -193,16 +193,16 @@ const certificationsData = [
     {
         title: "Postman API Student Expert",
         issuer: "Postman",
-        date: "May 2024",
-        description: "Validated expertise in API design, development, testing, and documentation using Postman tools.",
+        date: "March 2025",
+        description: "Validated core API development skills including design, testing, documentation, and workflow automation using Postman tools and collections.",
         badge: "assets/images/certifications/postman-api-student-expert-badge.png",
         verificationLink: "https://badgr.com/public/assertions/hJhfByj9S0CU3CiR7zZvhg?identity__email=nipunsathsara1999@gmail.com"
     },
     {
-        title: "Java Foundations Professional Certificate",
-        issuer: "JetBrains",
-        date: "May 2024",
-        description: "Demonstrated foundational knowledge in Java programming including OOP, exception handling, and basic algorithms using JetBrains tools and IntelliJ IDEA.",
+        title: "Java Foundations Professional",
+        issuer: "JetBrains | LinkedIn Learning",
+        date: "April 2025",
+        description: "Proven understanding of Java basics, OOP, exception handling, and algorithms with JetBrains Academy and IntelliJ IDEA-based assessments.",
         badge: "assets/images/certifications/java-foundations-certificate.png",
         verificationLink: "https://www.linkedin.com/learning/certificates/e36c4c7cb4dce77da805f0a45442256721d076b9b6e5b9f5dd37e9a4cd7a9a1e?trk=share_certificate"
     }

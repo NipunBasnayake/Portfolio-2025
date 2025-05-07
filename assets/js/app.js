@@ -521,7 +521,7 @@ function populateCertifications() {
                             <span class="date"><i class="far fa-calendar-alt"></i> ${cert.date}</span>
                         </div>
                         <p class="certification-description">${cert.description}</p>
-                        <a href="${cert.verificationLink}" target="_blank" class="btn btn-outline btn-sm">
+                        <a class="btn btn-primary"  href="${cert.verificationLink}" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Verify Credential
                         </a>
                     </div>
