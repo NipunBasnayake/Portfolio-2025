@@ -28,6 +28,12 @@ function populateProjects() {
     projectContainer.innerHTML = '';
     projectsData.forEach((project, index) => {
         const delay = (index % 3 + 1) * 100;
+        const viewLinkHTML = project.viewButton
+            ? `<a href="${project.demoLink}" target="_blank" class="project-link">
+                    <i class="fas fa-eye"></i>
+               </a>`
+            : '';
+
         const projectHTML = `
             <div class="col-md-6 col-lg-4 mb-4 project-item ${project.category}" data-aos="fade-up" data-aos-delay="${delay}">
                 <div class="project-card">
@@ -38,9 +44,7 @@ function populateProjects() {
                              onerror="this.onerror=null; this.src='${project.defaultImage}'">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="${project.demoLink}" target="_blank" class="project-link">
-                                    <i class="fas fa-eye"></i>
-                                </a>
+                                ${viewLinkHTML}
                                 <a href="${project.codeLink}" target="_blank" class="project-link">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -62,6 +66,7 @@ function populateProjects() {
         projectContainer.innerHTML += projectHTML;
     });
 }
+
 
 function populatePersonalInfo() {
     document.querySelector('.hero-content h1').innerHTML = `Hi, I'm <span class="highlight">${personalData.firstName}</span>`;

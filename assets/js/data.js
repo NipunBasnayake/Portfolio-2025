@@ -76,7 +76,8 @@ const projectsData = [
         "demoLink": "",
         "codeLink": "https://github.com/NipunBasnayake/HrManagementSystem-Angular-Springboot",
         "category": "web",
-        "featured": true
+        "featured": true,
+        "viewButton": false
     },
     {
         "title": "Task Manager Application",
@@ -87,8 +88,21 @@ const projectsData = [
         "demoLink": "",
         "codeLink": "https://github.com/NipunBasnayake/TaskManager-Angular-Springboot",
         "category": "web",
-        "featured": true
+        "featured": true,
+        "viewButton": false
     },
+    {
+        "title": "Java Microservices with Kafka",
+        "description": "Event-driven system with 3 microservices using Spring Boot and Apache Kafka for seamless communication and real-time data synchronization.",
+        "image": "Screenshots/app_screenshot.jpg",
+        "defaultImage": "assets/images/projects/microservices.jpg",
+        "tags": ["Spring Boot", "Apache Kafka", "Microservices", "RESTful API", "MySQL", "Java", "Maven"],
+        "demoLink": "",
+        "codeLink": "https://github.com/NipunBasnayake/Java-Springboot-Microservices",
+        "category": "backend",
+        "featured": true,
+        "viewButton": false
+    },    
     {
         "title": "Digital Tug Of War Game",
         "description": "Real-time multiplayer Tug of War game using React, Spring Boot, and WebSocket for live interactive gameplay.",
@@ -98,7 +112,8 @@ const projectsData = [
         "demoLink": "",
         "codeLink": "https://github.com/NipunBasnayake/Digital-Tug-Of-War-Game",
         "category": "web",
-        "featured": true
+        "featured": true,
+        "viewButton": false
     },
     {
         "title": "MOS Burgers Ordering System",
@@ -109,7 +124,8 @@ const projectsData = [
         "demoLink": "",
         "codeLink": "https://github.com/NipunBasnayake/MOS_Burgers",
         "category": "web",
-        "featured": true
+        "featured": true,
+        "viewButton": false
     },
     {
         "title": "Clothify Store POS System",
@@ -120,7 +136,8 @@ const projectsData = [
         "demoLink": "",
         "codeLink": "https://github.com/NipunBasnayake/Clothify-Store-JavaFX",
         "category": "desktop",
-        "featured": true
+        "featured": true,
+        "viewButton": false
     },
     {
         "title": "ChatterAI",
@@ -131,19 +148,21 @@ const projectsData = [
         "demoLink": "https://nipunbasnayake.github.io/ChatteraAI/",
         "codeLink": "https://github.com/NipunBasnayake/ChatteraAI",
         "category": "web",
-        "featured": true
+        "featured": true,
+        "viewButton": false
     },
-    {
-        "title": "LangEase Translator",
-        "description": "Language translator using MyMemory API with speech synthesis, dynamic language switching, and responsive UI.",
-        "image": "assets/projects/langease.jpg",
-        "defaultImage": "assets/images/projects/langease.jpg",
-        "tags": ["HTML", "CSS", "JavaScript", "Bootstrap", "MyMemory Translated API", "Speech Synthesis"],
-        "demoLink": "https://nipunbasnayake.github.io/LangEase-Translator/",
-        "codeLink": "https://github.com/NipunBasnayake/LangEase-Translator",
-        "category": "web",
-        "featured": true
-    },
+    // {
+    //     "title": "LangEase Translator",
+    //     "description": "Language translator using MyMemory API with speech synthesis, dynamic language switching, and responsive UI.",
+    //     "image": "assets/projects/langease.jpg",
+    //     "defaultImage": "assets/images/projects/langease.jpg",
+    //     "tags": ["HTML", "CSS", "JavaScript", "Bootstrap", "MyMemory Translated API", "Speech Synthesis"],
+    //     "demoLink": "https://nipunbasnayake.github.io/LangEase-Translator/",
+    //     "codeLink": "https://github.com/NipunBasnayake/LangEase-Translator",
+    //     "category": "web",
+    //     "featured": true,
+    //     "viewButton": false
+    // },
     {
         "title": "Vehicle Service Management System",
         "description": "Web app to manage vehicle services, users, and roles using PHP, Bootstrap, and a MySQL database backend.",
@@ -153,7 +172,8 @@ const projectsData = [
         "demoLink": "https://nipunbasnayake.github.io/Vehicle-Service-Management-System/",
         "codeLink": "https://github.com/NipunBasnayake/Vehicle-Service-Management-System",
         "category": "web",
-        "featured": true
+        "featured": true,
+        "viewButton": false
     },
     {
         "title": "Checkmate 3D",
@@ -164,7 +184,8 @@ const projectsData = [
         "demoLink": "https://nipunbasnayake.github.io/CheckMate3D",
         "codeLink": "https://github.com/NipunBasnayake/CheckMate3D",
         "category": "web",
-        "featured": true
+        "featured": true,
+        "viewButton": false
     }
 ];
 
