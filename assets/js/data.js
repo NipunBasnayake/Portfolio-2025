@@ -196,7 +196,7 @@ const certificationsData = [
         date: "May 2024",
         description: "Validated expertise in API design, development, testing, and documentation using Postman tools.",
         badge: "assets/images/certifications/postman-api-student-expert-badge.png",
-        verificationLink: "https://badgr.com/public/assertions/YOUR_BADGE_LINK"
+        verificationLink: "https://badgr.com/public/assertions/hJhfByj9S0CU3CiR7zZvhg?identity__email=nipunsathsara1999@gmail.com"
     },
     {
         title: "Java Foundations Professional Certificate",
