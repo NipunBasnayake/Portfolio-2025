@@ -28,6 +28,12 @@ function populateProjects() {
     projectContainer.innerHTML = '';
     projectsData.forEach((project, index) => {
         const delay = (index % 3 + 1) * 100;
+        const viewLinkHTML = project.viewButton
+            ? `<a href="${project.demoLink}" target="_blank" class="project-link">
+                    <i class="fas fa-eye"></i>
+               </a>`
+            : '';
+
         const projectHTML = `
             <div class="col-md-6 col-lg-4 mb-4 project-item ${project.category}" data-aos="fade-up" data-aos-delay="${delay}">
                 <div class="project-card">
@@ -38,9 +44,7 @@ function populateProjects() {
                              onerror="this.onerror=null; this.src='${project.defaultImage}'">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="${project.demoLink}" target="_blank" class="project-link">
-                                    <i class="fas fa-eye"></i>
-                                </a>
+                                ${viewLinkHTML}
                                 <a href="${project.codeLink}" target="_blank" class="project-link">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -62,6 +66,7 @@ function populateProjects() {
         projectContainer.innerHTML += projectHTML;
     });
 }
+
 
 function populatePersonalInfo() {
     document.querySelector('.hero-content h1').innerHTML = `Hi, I'm <span class="highlight">${personalData.firstName}</span>`;
@@ -216,6 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
     populatePersonalInfo();
     populateMainSkillAreas();
     populateProjects();
+    populateCertifications();
     initParticles();
     fixMobileScrolling();
 
@@ -494,4 +500,34 @@ function initScrollAnimation() {
     });
 
     handleScrollAnimation();
+}
+
+function populateCertifications() {
+    const certificationsContainer = document.getElementById('certifications-container');
+    certificationsContainer.innerHTML = '';
+    
+    certificationsData.forEach((cert, index) => {
+        const delay = (index + 1) * 100;
+        const certHTML = `
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="${delay}">
+                <div class="certification-card">
+                    <div class="certification-badge">
+                        <img src="${cert.badge}" alt="${cert.title} Badge" class="img-fluid">
+                    </div>
+                    <div class="certification-details">
+                        <h3>${cert.title}</h3>
+                        <div class="certification-meta">
+                            <span class="issuer"><i class="fas fa-award"></i> ${cert.issuer}</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> ${cert.date}</span>
+                        </div>
+                        <p class="certification-description">${cert.description}</p>
+                        <a class="btn btn-primary"  href="${cert.verificationLink}" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Verify Credential
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+        certificationsContainer.innerHTML += certHTML;
+    });
 }
