@@ -208,7 +208,7 @@ const certificationsData = [
     },
     {
         title: "Diploma in Information Technology",
-        issuer: "University of Colombo School of Computing",
+        issuer: "University of Colombo",
         date: "August 2023",
         description: "Comprehensive diploma covering key concepts in computer science, programming, databases, and information systems fundamentals.",
         badge: "assets/images/certifications/ucsc-it-diploma.png",
