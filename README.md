@@ -122,4 +122,4 @@ For professional inquiries or collaborations:
 - LinkedIn: [NipunBasnayake](https://www.linkedin.com/in/nipunbasnayake/)
 - GitHub: [NipunBasnayake](https://github.com/NipunBasnayake)
 
-[![Portfolio Live Demo](https://img.shields.io/badge/View-Live%20Demo-green?style=for-the-badge)](https://nipunbasnayake.github.io)
+[![Portfolio Live Demo](https://img.shields.io/badge/View-Live%20Demo-green?style=for-the-badge)](https://portfolio-2025-xi-brown.vercel.app/)
