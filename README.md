@@ -8,7 +8,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and certi
 ## **Features**
 
 ### **Interactive UI**:
-- Particle.js animated background in hero section
+- Particle.js animated background in the hero section
 - Typewriter effect for dynamic text animation
 - Smooth scrolling navigation
 - Responsive design for all device sizes
@@ -22,7 +22,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and certi
 
 ### **Professional Profile**:
 - About me section with personal information
-- Skills categorized by expertise areas
+- Skills categorised by expertise areas
 - Certification display with verification links
 - Downloadable resume/CV
 
@@ -50,7 +50,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and certi
 
 ### **Performance**:
 - Preloader with progress animation
-- Optimized assets and images
+- Optimised assets and images
 - Lazy loading for better performance
 - Minified CSS/JS in production
 
@@ -91,19 +91,22 @@ All dynamic content is managed through:
 
 ## **Screenshots**
 
-![Hero Section](assets/images/screenshots/hero-section.png)
+![Hero Section](assets/images/screenshots/hero-section.png)  
 *Hero section with particle background and typewriter effect*
 
-![About Section](assets/images/screenshots/about-section.png)
+![About Section](assets/images/screenshots/about-section.png)  
 *About me section with personal information*
 
-![Skills Section](assets/images/screenshots/skills-section.png)
-*Skills display with categorized badges*
+![Skills Section](assets/images/screenshots/skills-section.png)  
+*Skills display with categorised badges*
 
-![Projects Section](assets/images/screenshots/projects-section.png)
+![Projects Section](assets/images/screenshots/projects-section.png)  
 *Filterable projects gallery*
 
-![Contact Section](assets/images/screenshots/contact-section.png)
+![Certifications Section](assets/images/screenshots/certifications-section.png)  
+*Grid of certification cards with filtering and modal preview*
+
+![Contact Section](assets/images/screenshots/contact-section.png)  
 *Contact form with social media links*
 
 ---
