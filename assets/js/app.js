@@ -67,7 +67,6 @@ function populateProjects() {
     });
 }
 
-
 function populatePersonalInfo() {
     document.querySelector('.hero-content h1').innerHTML = `Hi, I'm <span class="highlight">${personalData.firstName}</span>`;
 
@@ -105,7 +104,7 @@ function populatePersonalInfo() {
                 }
             }
         });
-    } 
+    }
 
     document.querySelector('.about-content h3').textContent = sectionsData.about.subtitle;
     document.querySelector('.about-content .lead').innerHTML = `
@@ -505,7 +504,7 @@ function initScrollAnimation() {
 function populateCertifications() {
     const certificationsContainer = document.getElementById('certifications-container');
     certificationsContainer.innerHTML = '';
-    
+
     certificationsData.forEach((cert, index) => {
         const delay = (index + 1) * 100;
         const certHTML = `
