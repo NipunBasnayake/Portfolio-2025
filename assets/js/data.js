@@ -102,7 +102,7 @@ const projectsData = [
         "category": "backend",
         "featured": true,
         "viewButton": false
-    },    
+    },
     {
         "title": "Digital Tug Of War Game",
         "description": "Real-time multiplayer Tug of War game using React, Spring Boot, and WebSocket for live interactive gameplay.",
@@ -205,6 +205,22 @@ const certificationsData = [
         description: "Proven understanding of Java basics, OOP, exception handling, and algorithms with JetBrains Academy and IntelliJ IDEA-based assessments.",
         badge: "assets/images/certifications/java-foundations-certificate.png",
         verificationLink: "https://www.linkedin.com/learning/certificates/e36c4c7cb4dce77da805f0a45442256721d076b9b6e5b9f5dd37e9a4cd7a9a1e?trk=share_certificate"
+    },
+    {
+        title: "Diploma in Information Technology",
+        issuer: "University of Colombo School of Computing",
+        date: "August 2023",
+        description: "Comprehensive diploma covering key concepts in computer science, programming, databases, and information systems fundamentals.",
+        badge: "assets/images/certifications/ucsc-it-diploma.png",
+        verificationLink: ""
+    },
+    {
+        title: "Fundamentals of Digital Marketing",
+        issuer: "Google Digital Academy (Skillshop)",
+        date: "June 2022",
+        description: "Certified knowledge of core digital marketing concepts including SEO, SEM, email, social media, and analytics by Google.",
+        badge: "assets/images/certifications/google-digital-marketing.png",
+        verificationLink: "https://skillshop.exceedlms.com/student/award/5KvDazd1zcyRjFMPnJDBFZdf"
     }
 ];
 
