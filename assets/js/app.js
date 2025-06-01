@@ -44,7 +44,7 @@ function populateProjects() {
                              alt="${project.title}" 
                              class="img-fluid"
                              loading="lazy"
-                             onerror="this.onerror=null; this.src='${project.defaultImage}'">
+                             onerror="this.onerror=null; this.src='assets/images/projects/placeholder.webp'">
                         <div class="project-overlay">
                             <div class="project-links">
                                 ${viewLinkHTML}
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
             once: true,
             easing: 'ease-in-out',
             offset: 100,
-            disable: window.innerWidth < 768 // Disable AOS on mobile
+            disable: window.innerWidth < 768
         });
 
         animateSkills();
@@ -526,13 +526,13 @@ function populateCertifications() {
     const certificationsContainer = document.getElementById('certifications-container');
     certificationsContainer.innerHTML = '';
 
-    certificationsData.forEach((cert, index) => {
+    certificationsData.forEach((cert, index) => {        
         const delay = (index + 1) * 100;
         const certHTML = `
             <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="${delay}">
                 <div class="certification-card">
                     <div class="certification-badge">
-                        <img src="${cert.badge}" alt="${cert.title} Badge" class="img-fluid" loading="lazy">
+                        <img src="${cert.badge}" alt="${cert.title} Badge" class="img-fluid" loading="lazy" onerror="this.onerror=null; this.src='assets/images/certifications/placeholder.webp'">
                     </div>
                     <div class="certification-details">
                         <h3>${cert.title}</h3>
