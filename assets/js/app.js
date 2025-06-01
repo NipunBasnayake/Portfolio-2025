@@ -35,12 +35,15 @@ function populateProjects() {
             : '';
 
         const projectHTML = `
-            <div class="col-md-6 col-lg-4 mb-4 project-item ${project.category}" data-aos="fade-up" data-aos-delay="${delay}">
+            <div class="col-md-6 col-lg-4 mb-4 project-item ${project.category} ${project.featured ? 'featured' : ''}" data-aos="fade-up" data-aos-delay="${delay}">
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="${project.image.replace('assets/projects/', '/api/placeholder/400/250')}" 
+                        <img src="${project.image}" 
+                             srcset="${project.image} 320w, ${project.image.replace('.webp', '-medium.webp')} 768w, ${project.image.replace('.webp', '-large.webp')} 1200w"
+                             sizes="(max-width: 768px) 100vw, 33vw"
                              alt="${project.title}" 
                              class="img-fluid"
+                             loading="lazy"
                              onerror="this.onerror=null; this.src='${project.defaultImage}'">
                         <div class="project-overlay">
                             <div class="project-links">
@@ -208,12 +211,25 @@ function fixMobileScrolling() {
 
     setViewportHeight();
     window.addEventListener('resize', setViewportHeight);
+    window.addEventListener('orientationchange', setViewportHeight);
 
     if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
         document.addEventListener('touchstart', function (e) {
             window.scrollY = window.scrollY;
         }, { passive: false });
     }
+}
+
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -256,13 +272,14 @@ document.addEventListener('DOMContentLoaded', function () {
             duration: 1000,
             once: true,
             easing: 'ease-in-out',
-            offset: 100
+            offset: 100,
+            disable: window.innerWidth < 768 // Disable AOS on mobile
         });
 
         animateSkills();
     }
 
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', debounce(function () {
         const scrollPosition = window.scrollY;
         const navbar = document.getElementById('main-navbar');
         const aboutSection = document.getElementById('about');
@@ -290,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         updateActiveNavItem(scrollPosition);
-    });
+    }, 100));
 
     function updateActiveNavItem(scrollPosition) {
         const sections = document.querySelectorAll('section');
@@ -349,8 +366,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
+
+            if (!navigator.onLine) {
+                showAlert('No internet connection. Please try again later.', 'danger');
+                return;
+            }
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -375,26 +397,25 @@ document.addEventListener('DOMContentLoaded', function () {
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending...';
 
-            fetch('https://formsubmit.co/nipunsathsara1999@gmail.com', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => {
-                    if (response.ok) {
-                        showAlert('Your message has been sent successfully!', 'success');
-                        contactForm.reset();
-                    } else {
-                        throw new Error('Server responded with an error');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    showAlert('There was an error sending your message. Please try again later.', 'danger');
-                })
-                .finally(() => {
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = originalButtonText;
+            try {
+                const response = await fetch('https://formsubmit.co/nipunsathsara1999@gmail.com', {
+                    method: 'POST',
+                    body: formData,
+                    timeout: 10000
                 });
+                if (response.ok) {
+                    showAlert('Your message has been sent successfully!', 'success');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Server responded with an error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('Failed to send message. Please check your connection or try again later.', 'danger');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }
         });
 
         function showAlert(message, type) {
@@ -494,9 +515,9 @@ function initScrollAnimation() {
         });
     }
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', debounce(() => {
         handleScrollAnimation();
-    });
+    }, 100));
 
     handleScrollAnimation();
 }
@@ -511,7 +532,7 @@ function populateCertifications() {
             <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="${delay}">
                 <div class="certification-card">
                     <div class="certification-badge">
-                        <img src="${cert.badge}" alt="${cert.title} Badge" class="img-fluid">
+                        <img src="${cert.badge}" alt="${cert.title} Badge" class="img-fluid" loading="lazy">
                     </div>
                     <div class="certification-details">
                         <h3>${cert.title}</h3>
@@ -520,7 +541,7 @@ function populateCertifications() {
                             <span class="date"><i class="far fa-calendar-alt"></i> ${cert.date}</span>
                         </div>
                         <p class="certification-description">${cert.description}</p>
-                        <a class="btn btn-primary"  href="${cert.verificationLink}" target="_blank">
+                        <a class="btn btn-primary" href="${cert.verificationLink}" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Verify Credential
                         </a>
                     </div>
