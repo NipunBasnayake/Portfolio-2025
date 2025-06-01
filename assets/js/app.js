@@ -280,64 +280,122 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', debounce(function () {
-        const scrollPosition = window.scrollY;
-        const navbar = document.getElementById('main-navbar');
-        const aboutSection = document.getElementById('about');
-        const backToTop = document.getElementById('back-to-top');
+    const scrollPosition = window.scrollY;
+    const navbar = document.getElementById('main-navbar');
+    const aboutSection = document.getElementById('about');
+    const backToTop = document.getElementById('back-to-top');
 
-        const isAtHero = scrollPosition < aboutSection.offsetTop - 100;
+    // Determine if we're at the hero section
+    const isAtHero = scrollPosition < aboutSection.offsetTop - 100;
 
-        if (scrollPosition > 50) {
-            navbar.classList.add('sticky');
-
-            if (!isAtHero) {
-                navbar.classList.add('light-navbar');
-            } else {
-                navbar.classList.remove('light-navbar');
-            }
+    // Handle sticky and light navbar classes
+    if (scrollPosition > 50) {
+        navbar.classList.add('sticky');
+        if (!isAtHero) {
+            navbar.classList.add('light-navbar');
         } else {
-            navbar.classList.remove('sticky');
             navbar.classList.remove('light-navbar');
         }
-
-        if (scrollPosition > 300) {
-            backToTop.classList.add('show');
-        } else {
-            backToTop.classList.remove('show');
-        }
-
-        updateActiveNavItem(scrollPosition);
-    }, 100));
-
-    function updateActiveNavItem(scrollPosition) {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        sections.forEach(function (section) {
-            const sectionTop = section.offsetTop - 100;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                const id = section.getAttribute('id');
-
-                navLinks.forEach(function (link) {
-                    link.classList.remove('active');
-                });
-
-                document.querySelector(`.nav-link[href="#${id}"]`).classList.add('active');
-            }
-        });
+    } else {
+        navbar.classList.remove('sticky');
+        navbar.classList.remove('light-navbar');
     }
 
-    document.querySelectorAll('.nav-link, .scroll-down a, #back-to-top').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            if (this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                const hash = this.getAttribute('href');
-                smoothScroll(hash, 800);
-            }
-        });
+    // Show/hide back-to-top button
+    if (scrollPosition > 300) {
+        backToTop.classList.add('show');
+    } else {
+        backToTop.classList.remove('show');
+    }
+
+    // Update active nav item
+    updateActiveNavItem(scrollPosition);
+}, 100));
+
+function updateActiveNavItem(scrollPosition) {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    let activeSectionId = 'home'; // Default to 'home' when at the top
+
+    // Find the current section
+    sections.forEach(function (section) {
+        const sectionTop = section.offsetTop - 100; // Adjust offset for better timing
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            activeSectionId = section.getAttribute('id');
+        }
     });
+
+    // Special case for hero section (top of the page)
+    if (scrollPosition < sections[0].offsetTop - 100) {
+        activeSectionId = 'home';
+    }
+
+    // Update active class on nav links
+    navLinks.forEach(function (link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${activeSectionId}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+document.querySelectorAll('.nav-link, .scroll-down a, #back-to-top').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const hash = this.getAttribute('href');
+            smoothScroll(hash, 800);
+
+            // Close mobile navbar on link click
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarToggler && navbarCollapse.classList.contains('show')) {
+                navbarToggler.click(); // Programmatically close the navbar
+            }
+        }
+    });
+});
+
+// Debounce function (unchanged)
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Smooth scroll function (unchanged, assuming it's defined elsewhere)
+function smoothScroll(target, duration) {
+    const targetElement = document.querySelector(target);
+    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
 
     document.querySelectorAll('.filter-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
