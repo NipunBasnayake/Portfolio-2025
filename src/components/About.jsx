@@ -32,12 +32,17 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Image and Stats */}
           <div className="space-y-8">
+
             <div className="relative">
               <div className="w-full max-w-md mx-auto relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl transform rotate-3"></div>
-                <div className="relative bg-white p-8 rounded-2xl shadow-xl">
-                  <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-4xl">
-                    {personalData.firstName.charAt(0)}{personalData.lastName.split(' ')[0].charAt(0)}
+                <div className="relative bg-gradient-to-br from-blue-100 via-purple-100 to-blue-100 p-8 rounded-2xl shadow-xl">
+                <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-4xl">
+                    <img
+                        src={personalData.profilePic}
+                        className="w-full h-full object-cover rounded-full"
+                        alt="Profile"
+                    />
                   </div>
                 </div>
               </div>
@@ -64,7 +69,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-slate-900">
                 {personalData.fullName}
               </h3>
-              
+
               <div className="flex items-center text-slate-600 mb-4">
                 <MapPin className="w-5 h-5 mr-2" />
                 <span>{personalData.location}</span>

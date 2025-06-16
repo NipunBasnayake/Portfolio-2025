@@ -3,6 +3,8 @@ export const personalData = {
   lastName: "Sathsara Basnayake",
   fullName: "Nipun Sathsara Basnayake",
   age: 25,
+  illustration : "src/assets/images/photos/profile_Illustration.png",
+  profilePic: "src/assets/images/photos/ProfilePic.jpg",
   location: "Negombo, Sri Lanka",
   email: "nipunsathsara1999@gmail.com",
   phone: "+94 77 880 6029",
@@ -24,7 +26,7 @@ export const personalData = {
     "Spring Boot Developer",
     "Problem Solver",
   ],
-  experience: "1+",
+  experience: "1",
 };
 
 export const mainSkillAreas = [

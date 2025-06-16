@@ -51,12 +51,13 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Profile Image */}
+
           <div className="relative inline-block">
             <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-spin-slow opacity-75"></div>
               <div className="absolute inset-1 bg-slate-800 rounded-full flex items-center justify-center">
                 <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-2xl sm:text-3xl">
-                  {personalData.firstName.charAt(0)}{personalData.lastName.split(' ')[0].charAt(0)}
+                  <img src={personalData.illustration} alt={"profile image illustration"}/>
                 </div>
               </div>
             </div>
@@ -83,7 +84,7 @@ const Hero = () => {
             </div>
 
             <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-              {personalData.experience}+ years of experience building innovative software solutions. 
+              {personalData.experience}+ years of experience building innovative software solutions.
               Currently pursuing my degree at UCSC, passionate about creating impactful applications.
             </p>
 
