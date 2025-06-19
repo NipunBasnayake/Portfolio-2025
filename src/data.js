@@ -108,7 +108,7 @@ export const projectsData = [
   {
     title: "HR Management System",
     description: "Full-featured HR system with secure login and Angular Material UI.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/hrmanagement.webp",
     tags: ["Spring Boot", "JPA", "Angular", "Angular Material"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/HrManagementSystem-Angular-Springboot",
@@ -119,7 +119,7 @@ export const projectsData = [
   {
     title: "Task Manager Application",
     description: "Full-stack task manager app with JWT authentication and Docker.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/taskmanager.webp",
     tags: ["Spring Boot", "JPA", "Angular", "Docker"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/TaskManager-Angular-Springboot",
@@ -130,7 +130,7 @@ export const projectsData = [
   {
     title: "Java Microservices with Kafka",
     description: "Event-driven system with 3 microservices using Spring Boot.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/microservices.webp",
     tags: ["Spring Boot", "Apache Kafka", "Microservices", "Java"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/Java-Springboot-Microservices",
@@ -141,7 +141,7 @@ export const projectsData = [
   {
     title: "Digital Tug Of War Game",
     description: "Real-time multiplayer game using React and WebSocket.",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/tugofwar.webp",
     tags: ["ReactJS", "Spring Boot", "WebSocket", "Java"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/Digital-Tug-Of-War-Game",
@@ -152,7 +152,7 @@ export const projectsData = [
   {
     title: "MOS Burgers Ordering System",
     description: "Ordering system for MOS Burgers with REST APIs.",
-    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/mosburgers.webp",
     tags: ["Spring Boot", "JPA", "HTML", "Bootstrap"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/MOS_Burgers",
@@ -163,7 +163,7 @@ export const projectsData = [
   {
     title: "Clothify Store POS System",
     description: "JavaFX-based POS system for clothing stores.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/clothify.webp",
     tags: ["JavaFX", "Hibernate", "Google Guice"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/Clothify-Store-JavaFX",
@@ -174,7 +174,7 @@ export const projectsData = [
   {
     title: "ChatterAI",
     description: "AI chatbot using Gemini AI with a modern UI.",
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/chatterai.webp",
     tags: ["HTML", "CSS", "JavaScript", "AI"],
     demoLink: "https://nipunbasnayake.github.io/ChatteraAI/",
     codeLink: "https://github.com/NipunBasnayake/ChatteraAI",
@@ -185,7 +185,7 @@ export const projectsData = [
   {
     title: "Vehicle Service Management System",
     description: "Web app to manage vehicle services using PHP and MySQL.",
-    image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/service.webp",
     tags: ["PHP", "JavaScript", "HTML", "MySQL"],
     demoLink: "https://nipunbasnayake.github.io/Vehicle-Service-Management-System/",
     codeLink: "https://github.com/NipunBasnayake/Vehicle-Service-Management-System",
@@ -196,7 +196,7 @@ export const projectsData = [
   {
     title: "Checkmate 3D",
     description: "3D chess game using Three.js and Stockfish engine.",
-    image: "https://images.unsplash.com/photo-1528819622765-d6bcf132ac11?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "src/assets/images/projects/checkmate3d.webp",
     tags: ["Three.js", "JavaScript", "3D Graphics", "WebGL"],
     demoLink: "https://nipunbasnayake.github.io/CheckMate3D",
     codeLink: "https://github.com/NipunBasnayake/CheckMate3D",
