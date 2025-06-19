@@ -212,7 +212,7 @@ export const certificationsData = [
     issuer: "JetBrains | LinkedIn Learning",
     date: "April 2025",
     description: "Proven understanding of Java basics, OOP, and algorithms.",
-    badge: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    badge: "src/assets/images/certifications/Java Foundations Professional Certificate by JetBrains.webp",
     verificationLink: "https://www.linkedin.com/learning/certificates/e36c4c7cb4dce77da805f0a45442256721d076b9b6e5b9f5dd37e9a4cd7a9a1e?trk=share_certificate",
   },
   {
@@ -220,7 +220,7 @@ export const certificationsData = [
     issuer: "Docker | LinkedIn Learning",
     date: "May 2025",
     description: "Proven understanding of Docker basics and containerization.",
-    badge: "https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    badge: "src/assets/images/certifications/Docker Foundations Professional Certificate.png",
     verificationLink: "https://www.linkedin.com/learning/certificates/8cf1b85131850ea7862e9761743ee711aff4423ea1257463784dfc4d1796c4a6?trk=share_certificate",
   },
   {
@@ -228,7 +228,7 @@ export const certificationsData = [
     issuer: "Postman",
     date: "March 2025",
     description: "Validated core API development skills using Postman tools.",
-    badge: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    badge: "src/assets/images/certifications/Postman API Fundamentals Student Expert.png",
     verificationLink: "https://badgr.com/public/assertions/hJhfByj9S0CU3CiR7zZvhg?identity__email=nipunsathsara1999@gmail.com",
   },
   {
@@ -236,7 +236,7 @@ export const certificationsData = [
     issuer: "LinkedIn Learning",
     date: "May 2025",
     description: "Knowledge of machine learning concepts and algorithms.",
-    badge: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    badge: "src/assets/images/certifications/Machine Learning with Python Foundations.png",
     verificationLink: "https://www.linkedin.com/learning/certificates/20ffd5c690e3290fa914926a915d0e914240d0f88e40e77ce8b80807ae097367?trk=share_certificate",
   },
   {
@@ -244,15 +244,15 @@ export const certificationsData = [
     issuer: "University of Colombo",
     date: "August 2023",
     description: "Comprehensive diploma in computer science and programming.",
-    badge: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    verificationLink: "",
+    badge: "src/assets/images/certifications/Information Technology Diploma by UCSC.png",
+    verificationLink: "https://ucsc.cmb.ac.lk/verify/221479",
   },
   {
     title: "Fundamentals of Digital Marketing",
     issuer: "Google Digital Academy (Skillshop)",
     date: "June 2022",
     description: "Certified in SEO, SEM, email, and analytics by Google.",
-    badge: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    badge: "src/assets/images/certifications/Fundamentals of digital marketing.png",
     verificationLink: "https://skillshop.exceedlms.com/student/award/5KvDazd1zcyRjFMPnJDBFZdf",
   },
 ];
