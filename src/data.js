@@ -3,8 +3,8 @@ export const personalData = {
   lastName: "Sathsara Basnayake",
   fullName: "Nipun Sathsara Basnayake",
   age: 25,
-  illustration : "src/assets/images/photos/profile_Illustration.png",
-  profilePic: "src/assets/images/photos/ProfilePic.jpg",
+  illustration : "public/assets/images/photos/profile_Illustration.png",
+  profilePic: "public/assets/images/photos/ProfilePic.jpg",
   location: "Negombo, Sri Lanka",
   email: "nipunsathsara1999@gmail.com",
   phone: "+94 77 880 6029",
@@ -108,7 +108,7 @@ export const projectsData = [
   {
     title: "HR Management System",
     description: "Full-featured HR system with secure login and Angular Material UI.",
-    image: "src/assets/images/projects/hrmanagement.webp",
+    image: "public/assets/images/projects/hrmanagement.webp",
     tags: ["Spring Boot", "JPA", "Angular", "Angular Material"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/HrManagementSystem-Angular-Springboot",
@@ -119,7 +119,7 @@ export const projectsData = [
   {
     title: "Task Manager Application",
     description: "Full-stack task manager app with JWT authentication and Docker.",
-    image: "src/assets/images/projects/taskmanager.webp",
+    image: "public/assets/images/projects/taskmanager.webp",
     tags: ["Spring Boot", "JPA", "Angular", "Docker"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/TaskManager-Angular-Springboot",
@@ -130,7 +130,7 @@ export const projectsData = [
   {
     title: "Java Microservices with Kafka",
     description: "Event-driven system with 3 microservices using Spring Boot.",
-    image: "src/assets/images/projects/microservices.webp",
+    image: "public/assets/images/projects/microservices.webp",
     tags: ["Spring Boot", "Apache Kafka", "Microservices", "Java"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/Java-Springboot-Microservices",
@@ -141,7 +141,7 @@ export const projectsData = [
   {
     title: "Digital Tug Of War Game",
     description: "Real-time multiplayer game using React and WebSocket.",
-    image: "src/assets/images/projects/tugofwar.webp",
+    image: "public/assets/images/projects/tugofwar.webp",
     tags: ["ReactJS", "Spring Boot", "WebSocket", "Java"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/Digital-Tug-Of-War-Game",
@@ -152,7 +152,7 @@ export const projectsData = [
   {
     title: "MOS Burgers Ordering System",
     description: "Ordering system for MOS Burgers with REST APIs.",
-    image: "src/assets/images/projects/mosburgers.webp",
+    image: "public/assets/images/projects/mosburgers.webp",
     tags: ["Spring Boot", "JPA", "HTML", "Bootstrap"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/MOS_Burgers",
@@ -163,7 +163,7 @@ export const projectsData = [
   {
     title: "Clothify Store POS System",
     description: "JavaFX-based POS system for clothing stores.",
-    image: "src/assets/images/projects/clothify.webp",
+    image: "public/assets/images/projects/clothify.webp",
     tags: ["JavaFX", "Hibernate", "Google Guice"],
     demoLink: "",
     codeLink: "https://github.com/NipunBasnayake/Clothify-Store-JavaFX",
@@ -174,7 +174,7 @@ export const projectsData = [
   {
     title: "ChatterAI",
     description: "AI chatbot using Gemini AI with a modern UI.",
-    image: "src/assets/images/projects/chatterai.webp",
+    image: "public/assets/images/projects/chatterai.webp",
     tags: ["HTML", "CSS", "JavaScript", "AI"],
     demoLink: "https://nipunbasnayake.github.io/ChatteraAI/",
     codeLink: "https://github.com/NipunBasnayake/ChatteraAI",
@@ -185,7 +185,7 @@ export const projectsData = [
   {
     title: "Vehicle Service Management System",
     description: "Web app to manage vehicle services using PHP and MySQL.",
-    image: "src/assets/images/projects/service.webp",
+    image: "public/assets/images/projects/service.webp",
     tags: ["PHP", "JavaScript", "HTML", "MySQL"],
     demoLink: "https://nipunbasnayake.github.io/Vehicle-Service-Management-System/",
     codeLink: "https://github.com/NipunBasnayake/Vehicle-Service-Management-System",
@@ -196,7 +196,7 @@ export const projectsData = [
   {
     title: "Checkmate 3D",
     description: "3D chess game using Three.js and Stockfish engine.",
-    image: "src/assets/images/projects/checkmate3d.webp",
+    image: "public/assets/images/projects/checkmate3d.webp",
     tags: ["Three.js", "JavaScript", "3D Graphics", "WebGL"],
     demoLink: "https://nipunbasnayake.github.io/CheckMate3D",
     codeLink: "https://github.com/NipunBasnayake/CheckMate3D",
@@ -212,7 +212,7 @@ export const certificationsData = [
     issuer: "JetBrains | LinkedIn Learning",
     date: "April 2025",
     description: "Proven understanding of Java basics, OOP, and algorithms.",
-    badge: "src/assets/images/certifications/Java Foundations Professional Certificate by JetBrains.webp",
+    badge: "public/assets/images/certifications/Java Foundations Professional Certificate by JetBrains.webp",
     verificationLink: "https://www.linkedin.com/learning/certificates/e36c4c7cb4dce77da805f0a45442256721d076b9b6e5b9f5dd37e9a4cd7a9a1e?trk=share_certificate",
   },
   {
@@ -220,7 +220,7 @@ export const certificationsData = [
     issuer: "Docker | LinkedIn Learning",
     date: "May 2025",
     description: "Proven understanding of Docker basics and containerization.",
-    badge: "src/assets/images/certifications/Docker Foundations Professional Certificate.png",
+    badge: "public/assets/images/certifications/Docker Foundations Professional Certificate.png",
     verificationLink: "https://www.linkedin.com/learning/certificates/8cf1b85131850ea7862e9761743ee711aff4423ea1257463784dfc4d1796c4a6?trk=share_certificate",
   },
   {
@@ -228,7 +228,7 @@ export const certificationsData = [
     issuer: "Postman",
     date: "March 2025",
     description: "Validated core API development skills using Postman tools.",
-    badge: "src/assets/images/certifications/Postman API Fundamentals Student Expert.png",
+    badge: "public/assets/images/certifications/Postman API Fundamentals Student Expert.png",
     verificationLink: "https://badgr.com/public/assertions/hJhfByj9S0CU3CiR7zZvhg?identity__email=nipunsathsara1999@gmail.com",
   },
   {
@@ -236,7 +236,7 @@ export const certificationsData = [
     issuer: "LinkedIn Learning",
     date: "May 2025",
     description: "Knowledge of machine learning concepts and algorithms.",
-    badge: "src/assets/images/certifications/Machine Learning with Python Foundations.png",
+    badge: "public/assets/images/certifications/Machine Learning with Python Foundations.png",
     verificationLink: "https://www.linkedin.com/learning/certificates/20ffd5c690e3290fa914926a915d0e914240d0f88e40e77ce8b80807ae097367?trk=share_certificate",
   },
   {
@@ -244,7 +244,7 @@ export const certificationsData = [
     issuer: "University of Colombo",
     date: "August 2023",
     description: "Comprehensive diploma in computer science and programming.",
-    badge: "src/assets/images/certifications/Information Technology Diploma by UCSC.png",
+    badge: "public/assets/images/certifications/Information Technology Diploma by UCSC.png",
     verificationLink: "https://ucsc.cmb.ac.lk/verify/221479",
   },
   {
@@ -252,7 +252,7 @@ export const certificationsData = [
     issuer: "Google Digital Academy (Skillshop)",
     date: "June 2022",
     description: "Certified in SEO, SEM, email, and analytics by Google.",
-    badge: "src/assets/images/certifications/Fundamentals of digital marketing.png",
+    badge: "public/assets/images/certifications/Fundamentals of digital marketing.png",
     verificationLink: "https://skillshop.exceedlms.com/student/award/5KvDazd1zcyRjFMPnJDBFZdf",
   },
 ];
