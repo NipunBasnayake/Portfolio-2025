@@ -1,128 +1,54 @@
-# **Nipun Basnayake - Portfolio Website**
+# React + TypeScript + Vite
 
-## **Overview**
-A modern, responsive portfolio website showcasing my skills, projects, and certifications as a Software Engineering student at University of Colombo School of Computing (UCSC). The website features interactive elements, smooth animations, and a clean UI design to effectively present my professional profile.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## **Features**
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### **Interactive UI**:
-- Particle.js animated background in the hero section
-- Typewriter effect for dynamic text animation
-- Smooth scrolling navigation
-- Responsive design for all device sizes
-- Dark/light mode based on system preferences
+## Expanding the ESLint configuration
 
-### **Project Showcase**:
-- Filterable project gallery (Web/Mobile/Desktop)
-- Project cards with tags and descriptions
-- Live demo and GitHub links
-- Responsive image loading
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-### **Professional Profile**:
-- About me section with personal information
-- Skills categorised by expertise areas
-- Certification display with verification links
-- Downloadable resume/CV
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-### **Contact System**:
-- Functional contact form with validation
-- Direct social media links
-- Email and phone contact information
-- Form submission handling with FormSubmit
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
----
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## **Technologies Used**
-
-### **Frontend**:
-- HTML5, CSS3, JavaScript (ES6+)
-- Bootstrap 5
-- Font Awesome Icons
-- Google Fonts (Poppins)
-
-### **Libraries**:
-- AOS (Animate On Scroll)
-- Typed.js (Typewriter effect)
-- Particles.js (Interactive background)
-- FormSubmit (Contact form handling)
-
-### **Performance**:
-- Preloader with progress animation
-- Optimised assets and images
-- Lazy loading for better performance
-- Minified CSS/JS in production
-
----
-
-## **Website Structure**
-
-The portfolio follows a single-page application structure with distinct sections:
-
-1. **Hero Section**: Introduction with animated elements
-2. **About Section**: Personal profile and information
-3. **Skills Section**: Technical skills categorization
-4. **Projects Section**: Filterable project gallery
-5. **Certifications Section**: Professional certifications
-6. **Contact Section**: Contact form and social links
-
----
-
-## **Project Documentation**
-
-### **Data Management**
-All dynamic content is managed through:
-- `data.js` for personal information and content
-- JSON-like structures for projects and certifications
-- Modular JavaScript for easy updates
-
-### **Animation System**
-- AOS for scroll-triggered animations
-- Custom CSS animations for UI elements
-- JavaScript-controlled progress animations
-
-### **Form Handling**
-- Client-side validation
-- FormSubmit.co integration
-- Success/error message handling
-
----
-
-## **Screenshots**
-
-![Hero Section](assets/images/screenshots/hero-section.png)  
-*Hero section with particle background and typewriter effect*
-
-![About Section](assets/images/screenshots/about-section.png)  
-*About me section with personal information*
-
-![Skills Section](assets/images/screenshots/skills-section.png)  
-*Skills display with categorised badges*
-
-![Projects Section](assets/images/screenshots/projects-section.png)  
-*Filterable projects gallery*
-
-![Certifications Section](assets/images/screenshots/certifications-section.png)  
-*Grid of certification cards with filtering and modal preview*
-
-![Contact Section](assets/images/screenshots/contact-section.png)  
-*Contact form with social media links*
-
----
-
-## **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## **Contact**
-
-For professional inquiries or collaborations:
-- Email: [nipunsathsara1999@gmail.com](mailto:nipunsathsara1999@gmail.com)
-- Phone: +94 77 880 6029
-- LinkedIn: [NipunBasnayake](https://www.linkedin.com/in/nipunbasnayake/)
-- GitHub: [NipunBasnayake](https://github.com/NipunBasnayake)
-
-[![Portfolio Live Demo](https://img.shields.io/badge/View-Live%20Demo-green?style=for-the-badge)](https://portfolio-2025-xi-brown.vercel.app/)
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
