@@ -19,8 +19,8 @@ const Footer = () => {
               {personalData.firstName}<span className="text-blue-400">.</span>
             </div>
             <p className="text-slate-400 leading-relaxed">
-              Passionate software engineering student creating innovative solutions 
-              with modern technologies. Always learning, always building.
+              Software Engineering Intern focused on developing scalable and modern software solutions.
+              Dedicated to continuous learning and contributing effectively to team-driven projects.
             </p>
             <div className="flex space-x-4">
               <a
@@ -93,9 +93,6 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-slate-400 text-sm">
               © {currentYear} {personalData.fullName}. All rights reserved.
-            </div>
-            <div className="flex items-center text-slate-400 text-sm">
-              Made with <Heart className="w-4 h-4 text-red-400 mx-1" /> using React & Tailwind CSS
             </div>
           </div>
         </div>

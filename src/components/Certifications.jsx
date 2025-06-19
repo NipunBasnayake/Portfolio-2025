@@ -23,12 +23,11 @@ const Certifications = () => {
             >
               {/* Certificate Badge/Image */}
               <div className="relative mb-6">
-                <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-xl overflow-hidden">
+                <div className="w-full aspect-[4/3] bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-xl overflow-hidden">
                   <img
-                    src={cert.badge}
-
-                    alt={`${cert.title} Certificate`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      src={cert.badge}
+                      alt={`${cert.title} Certificate`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-full">
