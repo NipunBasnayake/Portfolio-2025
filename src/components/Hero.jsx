@@ -144,7 +144,7 @@ const Hero = () => {
               </p>
 
               {/* Enhanced CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                 {sectionsData.hero.ctaButtons.map((button, index) => (
                     <button
                         key={index}
@@ -164,7 +164,7 @@ const Hero = () => {
               </div>
 
               {/* Enhanced Social Links */}
-              <div className="flex justify-center space-x-6 pt-8">
+              <div className="flex justify-center space-x-6 pt-4">
                 {[
                   { href: personalData.socialLinks.github, icon: Github, label: 'GitHub' },
                   { href: personalData.socialLinks.linkedin, icon: Linkedin, label: 'LinkedIn' },
@@ -187,34 +187,34 @@ const Hero = () => {
           </div>
 
           {/* Enhanced scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="p-2 rounded-full bg-slate-800/30 backdrop-blur-sm border border-slate-700/50">
-              <ChevronDown size={32} className="text-gray-400 hover:text-blue-400 transition-colors duration-300" />
-            </div>
-          </div>
+          {/*  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-bounce">*/}
+          {/*      <div className="p-2 rounded-full bg-slate-800/30 backdrop-blur-sm border border-slate-700/50">*/}
+          {/*          <ChevronDown size={32} className="text-gray-400 hover:text-blue-400 transition-colors duration-300" />*/}
+          {/*      </div>*/}
+          {/*  </div>*/}
         </div>
 
         {/* Custom CSS for animations */}
-        <style jsx>{`
-        @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 1s ease-out;
-        }
-      `}</style>
+          <style jsx>{`
+              @keyframes gradient {
+                  0%, 100% { background-position: 0% 50%; }
+                  50% { background-position: 100% 50%; }
+              }
+
+              @keyframes fade-in {
+                  from { opacity: 0; transform: translateY(20px); }
+                  to { opacity: 1; transform: translateY(0); }
+              }
+
+              .animate-gradient {
+                  background-size: 200% 200%;
+                  animation: gradient 3s ease infinite;
+              }
+
+              .animate-fade-in {
+                  animation: fade-in 1s ease-out;
+              }
+          `}</style>
       </section>
   );
 };
