@@ -99,20 +99,36 @@ const About = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              {sectionsData.about.ctaButtons.map((button, index) => (
-                <button
-                  key={index}
-                  onClick={() => button.id === 'download-cv' ? null : scrollToSection(button.link)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-                    button.type === 'primary'
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl'
-                      : 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white'
-                  }`}
-                >
-                  {button.text}
-                </button>
-              ))}
+              {sectionsData.about.ctaButtons.map((button, index) =>
+                  button.id === 'download-cv' ? (
+                      <a
+                          key={index}
+                          href={button.link}
+                          download
+                          className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                              button.type === 'primary'
+                                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl'
+                                  : 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white'
+                          }`}
+                      >
+                        {button.text}
+                      </a>
+                  ) : (
+                      <button
+                          key={index}
+                          onClick={() => scrollToSection(button.link)}
+                          className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                              button.type === 'primary'
+                                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl'
+                                  : 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white'
+                          }`}
+                      >
+                        {button.text}
+                      </button>
+                  )
+              )}
             </div>
+
           </div>
         </div>
       </div>

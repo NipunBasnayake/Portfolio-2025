@@ -8,8 +8,8 @@ export const personalData = {
   location: "Negombo, Sri Lanka",
   email: "nipunsathsara1999@gmail.com",
   phone: "+94 77 880 6029",
-  education: "UCSC Undergraduate",
-  bio: "Hi, I'm Nipun Sathsara Basnayake, a passionate 25-year-old Software Engineering student from Negombo, Sri Lanka. I am currently pursuing my Bachelor's degree in Information Technology at the University of Colombo School of Computing (UCSC). With a keen interest in developing innovative software solutions, I aim to blend creativity and technical expertise to build impactful applications.",
+  education: "UCSC Undergraduate | Software Engineering Intern",
+  bio: "Hi, I'm Nipun Sathsara Basnayake, a passionate 25-year-old Software Engineering Intern from Negombo, Sri Lanka. I am currently pursuing my Bachelor's degree in Information Technology at the University of Colombo School of Computing (UCSC). With hands-on internship experience and a keen interest in developing innovative software solutions, I aim to blend creativity and technical expertise to build impactful applications.",
   socialLinks: {
     github: "https://github.com/NipunBasnayake",
     linkedin: "https://www.linkedin.com/in/nipunbasnayake/",
@@ -18,15 +18,15 @@ export const personalData = {
     whatsapp: "https://wa.me/94778806029",
   },
   roles: [
+    "Software Engineering Intern",
     "Full Stack Developer",
-    "UCSC Undergraduate",
     "Java Developer",
     "React Developer",
     "Angular Developer",
     "Spring Boot Developer",
     "Problem Solver",
   ],
-  experience: "1",
+  experience: "2+",
 };
 
 export const mainSkillAreas = [
@@ -275,11 +275,11 @@ export const sectionsData = {
   },
   about: {
     title: "About Me",
-    subtitle: "Software Engineering Student",
+    subtitle: "Software Engineering Intern | UCSC Undergraduate",
     ctaButtons: [
       {
         text: "Download CV",
-        link: "#",
+        link: "/assets/cv/nipun_sathsara_resume.pdf",
         type: "primary",
         id: "download-cv",
       },

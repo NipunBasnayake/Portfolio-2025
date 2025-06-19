@@ -139,7 +139,7 @@ const Hero = () => {
               </div>
 
               <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-                {personalData.experience}+ years of experience building innovative software solutions.
+                {personalData.experience} years of experience building innovative software solutions.
                 Currently pursuing my degree at UCSC, passionate about creating impactful applications.
               </p>
 
