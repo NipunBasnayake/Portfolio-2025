@@ -6,6 +6,7 @@ const Certifications = () => {
   return (
     <section id="certifications" className="py-20 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             {sectionsData.certifications.title}
@@ -15,19 +16,23 @@ const Certifications = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Certifications Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-[1200px]">
           {certificationsData.map((cert, index) => (
             <div
               key={index}
-              className="group bg-slate-800 rounded-2xl p-6 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border border-slate-700"
+              className="group bg-slate-800 rounded-2xl p-6 border border-slate-700 
+                         transition-all duration-500 
+                         hover:rotate-x-3 hover:-rotate-y-3 hover:scale-105 
+                         hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
             >
               {/* Certificate Badge/Image */}
               <div className="relative mb-6">
                 <div className="w-full aspect-[4/3] bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-xl overflow-hidden">
                   <img
-                      src={cert.badge}
-                      alt={`${cert.title} Certificate`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    src={cert.badge}
+                    alt={`${cert.title} Certificate`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-full">
@@ -62,7 +67,7 @@ const Certifications = () => {
                     href={cert.verificationLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                    className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-110"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Verify Certificate
